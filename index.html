@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Model Evolution Arena</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Section navigation">
+        <a href="#chat">CHAT</a>
+        <a href="#image">IMAGE</a>
+        <a href="#video">VIDEO</a>
+        <a href="#sources">Sources</a>
+      </nav>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Arena-style model evolution map</p>
+          <h1>主流 AI 模型发布时间线与评分曲线</h1>
+          <p class="lead">
+            以 CHAT、IMAGE、VIDEO 三个竞争场为主轴，按模型家族保留代表性的代际主线节点，
+            并补充排名、Elo/Score、胜率和二维热力图，展示模型能力如何随时间推进。
+          </p>
+        </div>
+        <div class="hero-panel" aria-label="Dataset rules">
+          <span>数据策略</span>
+          <strong>时间排序优先，代际主线优先</strong>
+          <p>
+            每条曲线渲染前都会按发布日期升序重排；同日节点使用可读偏移，防止曲线回折或垂直乱线。
+          </p>
+          <small data-snapshot-date>Daily snapshot: embedded fallback</small>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="Global controls">
+        <div class="tabs" role="tablist" aria-label="Arena sections">
+          <button class="tab active" type="button" data-section="chat" role="tab" aria-selected="true">CHAT</button>
+          <button class="tab" type="button" data-section="image" role="tab" aria-selected="false">IMAGE</button>
+          <button class="tab" type="button" data-section="video" role="tab" aria-selected="false">VIDEO</button>
+        </div>
+        <div class="switches" aria-label="Chart modes">
+          <button class="mode active" type="button" data-mode="score">Score / Elo</button>
+          <button class="mode" type="button" data-mode="rank">Rank</button>
+          <button class="mode" type="button" data-mode="winRate">Win rate</button>
+        </div>
+      </section>
+
+      <section class="arena active" id="chat" data-panel="chat">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Text-to-text arena</p>
+            <h2>CHAT：语言对话模型主线演进</h2>
+          </div>
+          <p>
+            重点保留 OpenAI、Anthropic、Google、xAI、Meta、DeepSeek、Qwen、Kimi、MiniMax 的代表版本，最新分数参考 Arena/LMArena
+            文本榜单快照，早期节点用同一标尺归一化，方便观察代际斜率。
+          </p>
+        </div>
+        <div class="viz-layout">
+          <figure class="chart-shell">
+            <div class="chart-title">
+              <h3>发布时间线与能力曲线</h3>
+              <span data-current-metric>Score / Elo</span>
+            </div>
+            <svg id="chart-chat" class="timeline-chart" role="img" aria-label="CHAT model timeline chart"></svg>
+          </figure>
+          <aside class="insight-strip" id="insights-chat"></aside>
+        </div>
+        <div class="table-grid">
+          <section>
+            <h3>代表节点排名表</h3>
+            <div class="table-wrap"><table id="table-chat"></table></div>
+          </section>
+          <section>
+            <h3>二维胜率热力图</h3>
+            <div id="heatmap-chat" class="heatmap"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="arena" id="image" data-panel="image">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Text-to-image and image edit arenas</p>
+            <h2>IMAGE：图像生成模型主线演进</h2>
+          </div>
+          <p>
+            以 Midjourney、OpenAI、Google、Google Nano Banana、Black Forest Labs、Stability 等家族为主线，
+            同代变体只保留可代表能力跃迁的节点；每日脚本会额外识别新的 Nano Banana 命名。
+          </p>
+        </div>
+        <div class="viz-layout">
+          <figure class="chart-shell">
+            <div class="chart-title">
+              <h3>发布时间线与能力曲线</h3>
+              <span data-current-metric>Score / Elo</span>
+            </div>
+            <svg id="chart-image" class="timeline-chart" role="img" aria-label="IMAGE model timeline chart"></svg>
+          </figure>
+          <aside class="insight-strip" id="insights-image"></aside>
+        </div>
+        <div class="table-grid">
+          <section>
+            <h3>代表节点排名表</h3>
+            <div class="table-wrap"><table id="table-image"></table></div>
+          </section>
+          <section>
+            <h3>二维胜率热力图</h3>
+            <div id="heatmap-image" class="heatmap"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="arena" id="video" data-panel="video">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Text-to-video arena</p>
+            <h2>VIDEO：视频生成模型主线演进</h2>
+          </div>
+          <p>
+            视频板块以 Sora、Veo、Runway、Kling、Seedance、Wan、Pika Labs 等家族为核心，采用 Artificial Analysis
+            与 Arena 类榜单中的质量 Elo/Score 快照补强。
+          </p>
+        </div>
+        <div class="viz-layout">
+          <figure class="chart-shell">
+            <div class="chart-title">
+              <h3>发布时间线与能力曲线</h3>
+              <span data-current-metric>Score / Elo</span>
+            </div>
+            <svg id="chart-video" class="timeline-chart" role="img" aria-label="VIDEO model timeline chart"></svg>
+          </figure>
+          <aside class="insight-strip" id="insights-video"></aside>
+        </div>
+        <div class="table-grid">
+          <section>
+            <h3>代表节点排名表</h3>
+            <div class="table-wrap"><table id="table-video"></table></div>
+          </section>
+          <section>
+            <h3>二维胜率热力图</h3>
+            <div id="heatmap-video" class="heatmap"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="method">
+        <h2>数据与绘图约束</h2>
+        <div class="method-grid">
+          <article>
+            <h3>代际主线</h3>
+            <p>每个家族只保留能代表版本演进的主节点，降低同代 preview、high、pro、分辨率变体造成的噪音。</p>
+          </article>
+          <article>
+            <h3>时间单调</h3>
+            <p>绘图函数先按发布日期排序，再生成路径；同一天多节点用稳定偏移处理，所以曲线不会右往左折返。</p>
+          </article>
+          <article>
+            <h3>评分说明</h3>
+            <p>最新榜单节点优先用 Arena/LMArena 或 Artificial Analysis 的 Score/Elo；历史节点用同尺度归一化近似。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sources" id="sources">
+        <h2>可验证来源</h2>
+        <ol>
+          <li><a href="https://arena.ai/leaderboard/text">Arena.ai Text Arena leaderboard</a></li>
+          <li><a href="https://lmarena.ai/leaderboard">LMArena leaderboard overview</a></li>
+          <li><a href="https://arena.ai/leaderboard/text-to-image">Arena.ai Text-to-Image Arena leaderboard</a></li>
+          <li><a href="https://arena.ai/leaderboard/image-edit">Arena.ai Image Edit Arena leaderboard</a></li>
+          <li><a href="https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video">Artificial Analysis Text-to-Video Arena leaderboard</a></li>
+          <li><a href="https://arena.ai/leaderboard/video-edit">Arena.ai Video Edit Arena leaderboard</a></li>
+          <li><a href="https://openai.com/index/gpt-4-research/">OpenAI GPT-4 announcement</a></li>
+          <li><a href="https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/">OpenAI GPT-4o announcement</a></li>
+          <li><a href="https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/">Meta Muse Spark announcement</a></li>
+          <li><a href="https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/">Google Nano Banana 2 announcement</a></li>
+        </ol>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

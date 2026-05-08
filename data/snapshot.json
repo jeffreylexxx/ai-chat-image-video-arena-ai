@@ -1,0 +1,838 @@
+{
+  "generatedAt": "2026-05-08T10:11:17.469Z",
+  "schemaVersion": 1,
+  "sourcePolicy": "Daily snapshot generated from embedded seed plus updater discoveries. Scores mix leaderboard snapshots and normalized historical estimates.",
+  "sections": {
+    "chat": {
+      "label": "CHAT",
+      "unit": "Arena score",
+      "note": "Text Arena / LMArena 快照与历史归一化节点",
+      "models": [
+        {
+          "family": "OpenAI",
+          "name": "GPT-3.5",
+          "date": "2022-11-30",
+          "score": 1110,
+          "rank": 24,
+          "winRate": 0.55,
+          "source": "ChatGPT public launch era"
+        },
+        {
+          "family": "OpenAI",
+          "name": "GPT-4",
+          "date": "2023-03-14",
+          "score": 1251,
+          "rank": 10,
+          "winRate": 0.66,
+          "source": "OpenAI GPT-4 announcement"
+        },
+        {
+          "family": "OpenAI",
+          "name": "GPT-4 Turbo",
+          "date": "2023-11-06",
+          "score": 1287,
+          "rank": 8,
+          "winRate": 0.69,
+          "source": "OpenAI DevDay generation"
+        },
+        {
+          "family": "OpenAI",
+          "name": "GPT-4o",
+          "date": "2024-05-13",
+          "score": 1354,
+          "rank": 6,
+          "winRate": 0.74,
+          "source": "OpenAI GPT-4o announcement"
+        },
+        {
+          "family": "OpenAI",
+          "name": "o3",
+          "date": "2025-04-16",
+          "score": 1428,
+          "rank": 17,
+          "winRate": 0.81,
+          "source": "Arena text snapshot"
+        },
+        {
+          "family": "OpenAI",
+          "name": "GPT-5.1 high",
+          "date": "2025-11-12",
+          "score": 1458,
+          "rank": 8,
+          "winRate": 0.84,
+          "source": "LMArena overview snapshot"
+        },
+        {
+          "family": "OpenAI",
+          "name": "GPT-5.4 high",
+          "date": "2026-04-09",
+          "score": 1484,
+          "rank": 7,
+          "winRate": 0.86,
+          "source": "Arena text snapshot"
+        },
+        {
+          "family": "Anthropic",
+          "name": "Claude 2",
+          "date": "2023-07-11",
+          "score": 1180,
+          "rank": 19,
+          "winRate": 0.59,
+          "source": "Anthropic release line"
+        },
+        {
+          "family": "Anthropic",
+          "name": "Claude 3 Opus",
+          "date": "2024-03-04",
+          "score": 1248,
+          "rank": 12,
+          "winRate": 0.65,
+          "source": "Claude 3 family"
+        },
+        {
+          "family": "Anthropic",
+          "name": "Claude 3.5 Sonnet",
+          "date": "2024-06-20",
+          "score": 1308,
+          "rank": 9,
+          "winRate": 0.71,
+          "source": "Claude 3.5 Sonnet announcement"
+        },
+        {
+          "family": "Anthropic",
+          "name": "Claude Sonnet 4.5",
+          "date": "2025-09-29",
+          "score": 1450,
+          "rank": 10,
+          "winRate": 0.83,
+          "source": "LMArena overview snapshot"
+        },
+        {
+          "family": "Anthropic",
+          "name": "Claude Opus 4.6 thinking",
+          "date": "2026-04-09",
+          "score": 1504,
+          "rank": 1,
+          "winRate": 0.88,
+          "source": "Arena text snapshot"
+        },
+        {
+          "family": "Google",
+          "name": "Gemini Pro",
+          "date": "2023-12-06",
+          "score": 1187,
+          "rank": 18,
+          "winRate": 0.6,
+          "source": "Gemini launch"
+        },
+        {
+          "family": "Google",
+          "name": "Gemini 1.5 Pro",
+          "date": "2024-02-15",
+          "score": 1260,
+          "rank": 11,
+          "winRate": 0.66,
+          "source": "Gemini 1.5 Pro announcement"
+        },
+        {
+          "family": "Google",
+          "name": "Gemini 2.5 Pro",
+          "date": "2025-03-25",
+          "score": 1451,
+          "rank": 9,
+          "winRate": 0.83,
+          "source": "LMArena overview snapshot"
+        },
+        {
+          "family": "Google",
+          "name": "Gemini 3 Pro",
+          "date": "2025-11-18",
+          "score": 1490,
+          "rank": 1,
+          "winRate": 0.87,
+          "source": "LMArena overview snapshot"
+        },
+        {
+          "family": "Google",
+          "name": "Gemini 3.1 Pro preview",
+          "date": "2026-04-09",
+          "score": 1492,
+          "rank": 3,
+          "winRate": 0.87,
+          "source": "Arena text snapshot"
+        },
+        {
+          "family": "xAI",
+          "name": "Grok-1",
+          "date": "2023-11-04",
+          "score": 1160,
+          "rank": 22,
+          "winRate": 0.57,
+          "source": "xAI launch era"
+        },
+        {
+          "family": "xAI",
+          "name": "Grok-2",
+          "date": "2024-08-13",
+          "score": 1280,
+          "rank": 15,
+          "winRate": 0.67,
+          "source": "xAI Grok-2 era"
+        },
+        {
+          "family": "xAI",
+          "name": "Grok-3",
+          "date": "2025-02-17",
+          "score": 1402,
+          "rank": 13,
+          "winRate": 0.78,
+          "source": "Grok-3 era"
+        },
+        {
+          "family": "xAI",
+          "name": "Grok-4.1 thinking",
+          "date": "2025-12-01",
+          "score": 1477,
+          "rank": 3,
+          "winRate": 0.85,
+          "source": "LMArena overview snapshot"
+        },
+        {
+          "family": "xAI",
+          "name": "Grok-4.20 beta1",
+          "date": "2026-04-09",
+          "score": 1486,
+          "rank": 5,
+          "winRate": 0.86,
+          "source": "Arena text snapshot"
+        },
+        {
+          "family": "Meta",
+          "name": "Llama 2 Chat",
+          "date": "2023-07-18",
+          "score": 1120,
+          "rank": 30,
+          "winRate": 0.55,
+          "source": "Meta Llama open model generation"
+        },
+        {
+          "family": "Meta",
+          "name": "Llama 3 70B Instruct",
+          "date": "2024-04-18",
+          "score": 1210,
+          "rank": 23,
+          "winRate": 0.62,
+          "source": "Meta Llama 3 release"
+        },
+        {
+          "family": "Meta",
+          "name": "Llama 3.1 405B Instruct",
+          "date": "2024-07-23",
+          "score": 1278,
+          "rank": 18,
+          "winRate": 0.68,
+          "source": "Meta Llama 3.1 release"
+        },
+        {
+          "family": "Meta",
+          "name": "Llama 4 Maverick",
+          "date": "2025-04-05",
+          "score": 1352,
+          "rank": 16,
+          "winRate": 0.74,
+          "source": "Meta Llama 4 release"
+        },
+        {
+          "family": "Meta",
+          "name": "Muse Spark",
+          "date": "2026-04-08",
+          "score": 1468,
+          "rank": 6,
+          "winRate": 0.85,
+          "source": "Meta Muse Spark announcement"
+        },
+        {
+          "family": "DeepSeek",
+          "name": "DeepSeek-V2",
+          "date": "2024-05-07",
+          "score": 1222,
+          "rank": 21,
+          "winRate": 0.64,
+          "source": "DeepSeek V2 generation"
+        },
+        {
+          "family": "DeepSeek",
+          "name": "DeepSeek-V3",
+          "date": "2024-12-26",
+          "score": 1350,
+          "rank": 15,
+          "winRate": 0.75,
+          "source": "DeepSeek V3 release"
+        },
+        {
+          "family": "DeepSeek",
+          "name": "DeepSeek-R1",
+          "date": "2025-01-20",
+          "score": 1418,
+          "rank": 12,
+          "winRate": 0.8,
+          "source": "DeepSeek R1 release"
+        },
+        {
+          "family": "DeepSeek",
+          "name": "DeepSeek-V4",
+          "date": "2026-03-15",
+          "score": 1472,
+          "rank": 5,
+          "winRate": 0.85,
+          "source": "Daily snapshot candidate"
+        },
+        {
+          "family": "Qwen",
+          "name": "Qwen1.5 72B Chat",
+          "date": "2024-02-05",
+          "score": 1195,
+          "rank": 26,
+          "winRate": 0.61,
+          "source": "Qwen 1.5 generation"
+        },
+        {
+          "family": "Qwen",
+          "name": "Qwen2.5 Max",
+          "date": "2025-01-29",
+          "score": 1390,
+          "rank": 14,
+          "winRate": 0.78,
+          "source": "Qwen 2.5 Max release"
+        },
+        {
+          "family": "Qwen",
+          "name": "Qwen3 Max",
+          "date": "2025-09-05",
+          "score": 1455,
+          "rank": 9,
+          "winRate": 0.83,
+          "source": "Daily snapshot candidate"
+        },
+        {
+          "family": "Qwen",
+          "name": "Qwen3.5 Max",
+          "date": "2026-03-20",
+          "score": 1470,
+          "rank": 7,
+          "winRate": 0.85,
+          "source": "Daily snapshot candidate"
+        },
+        {
+          "family": "Kimi",
+          "name": "Kimi Chat",
+          "date": "2023-10-09",
+          "score": 1165,
+          "rank": 29,
+          "winRate": 0.58,
+          "source": "Moonshot Kimi launch era"
+        },
+        {
+          "family": "Kimi",
+          "name": "Kimi k1.5",
+          "date": "2025-01-20",
+          "score": 1385,
+          "rank": 15,
+          "winRate": 0.77,
+          "source": "Kimi k-series generation"
+        },
+        {
+          "family": "Kimi",
+          "name": "Kimi K2",
+          "date": "2025-07-11",
+          "score": 1446,
+          "rank": 11,
+          "winRate": 0.82,
+          "source": "Kimi K2 release"
+        },
+        {
+          "family": "Kimi",
+          "name": "Kimi K3",
+          "date": "2026-02-10",
+          "score": 1475,
+          "rank": 6,
+          "winRate": 0.85,
+          "source": "Daily snapshot candidate"
+        },
+        {
+          "family": "MiniMax",
+          "name": "abab6.5",
+          "date": "2023-09-05",
+          "score": 1145,
+          "rank": 31,
+          "winRate": 0.56,
+          "source": "MiniMax abab generation"
+        },
+        {
+          "family": "MiniMax",
+          "name": "MiniMax-Text-01",
+          "date": "2025-01-15",
+          "score": 1368,
+          "rank": 16,
+          "winRate": 0.76,
+          "source": "MiniMax Text-01 release"
+        },
+        {
+          "family": "MiniMax",
+          "name": "MiniMax-M1",
+          "date": "2025-06-16",
+          "score": 1430,
+          "rank": 13,
+          "winRate": 0.8,
+          "source": "MiniMax M1 generation"
+        },
+        {
+          "family": "MiniMax",
+          "name": "MiniMax-M2",
+          "date": "2026-02-01",
+          "score": 1462,
+          "rank": 10,
+          "winRate": 0.84,
+          "source": "Daily snapshot candidate"
+        }
+      ]
+    },
+    "image": {
+      "label": "IMAGE",
+      "unit": "Image Arena score",
+      "note": "Text-to-image / image edit Arena 快照与历史归一化节点",
+      "models": [
+        {
+          "family": "OpenAI",
+          "name": "DALL-E 2",
+          "date": "2022-04-06",
+          "score": 930,
+          "rank": 26,
+          "winRate": 0.5,
+          "source": "OpenAI image generation era"
+        },
+        {
+          "family": "OpenAI",
+          "name": "DALL-E 3",
+          "date": "2023-09-20",
+          "score": 1085,
+          "rank": 14,
+          "winRate": 0.62,
+          "source": "DALL-E 3 generation"
+        },
+        {
+          "family": "OpenAI",
+          "name": "GPT-image-1",
+          "date": "2025-03-25",
+          "score": 1241,
+          "rank": 2,
+          "winRate": 0.79,
+          "source": "Arena text-to-image snapshot"
+        },
+        {
+          "family": "OpenAI",
+          "name": "GPT-image-1.5",
+          "date": "2026-01-20",
+          "score": 1376,
+          "rank": 5,
+          "winRate": 0.86,
+          "source": "Arena image-edit snapshot"
+        },
+        {
+          "family": "OpenAI",
+          "name": "GPT-image-2",
+          "date": "2026-04-19",
+          "score": 1512,
+          "rank": 1,
+          "winRate": 0.9,
+          "source": "Arena text-to-image snapshot"
+        },
+        {
+          "family": "Google",
+          "name": "Imagen 2",
+          "date": "2023-12-13",
+          "score": 1045,
+          "rank": 18,
+          "winRate": 0.59,
+          "source": "Imagen generation"
+        },
+        {
+          "family": "Google",
+          "name": "Imagen 3",
+          "date": "2024-05-14",
+          "score": 1128,
+          "rank": 10,
+          "winRate": 0.68,
+          "source": "Imagen 3 launch era"
+        },
+        {
+          "family": "Google",
+          "name": "Gemini 2.5 Flash Image",
+          "date": "2025-08-26",
+          "score": 1271,
+          "rank": 6,
+          "winRate": 0.82,
+          "source": "Arena multi-image edit snapshot"
+        },
+        {
+          "family": "Google",
+          "name": "Gemini 3 Pro Image",
+          "date": "2025-12-16",
+          "score": 1388,
+          "rank": 3,
+          "winRate": 0.88,
+          "source": "Arena image-edit snapshot"
+        },
+        {
+          "family": "Google",
+          "name": "Gemini 3.1 Flash Image",
+          "date": "2026-03-18",
+          "score": 1264,
+          "rank": 2,
+          "winRate": 0.84,
+          "source": "Arena text-to-image snapshot"
+        },
+        {
+          "family": "Google Nano Banana",
+          "name": "Nano Banana 1",
+          "date": "2025-08-26",
+          "score": 1271,
+          "rank": 6,
+          "winRate": 0.82,
+          "source": "Gemini 2.5 Flash Image / Nano Banana launch"
+        },
+        {
+          "family": "Google Nano Banana",
+          "name": "Nano Banana Pro",
+          "date": "2025-11-18",
+          "score": 1388,
+          "rank": 3,
+          "winRate": 0.88,
+          "source": "Gemini 3 Pro Image / Nano Banana Pro"
+        },
+        {
+          "family": "Google Nano Banana",
+          "name": "Nano Banana 2",
+          "date": "2026-02-26",
+          "score": 1438,
+          "rank": 2,
+          "winRate": 0.89,
+          "source": "Google Nano Banana 2 announcement"
+        },
+        {
+          "family": "Midjourney",
+          "name": "V4",
+          "date": "2022-11-05",
+          "score": 980,
+          "rank": 22,
+          "winRate": 0.54,
+          "source": "Midjourney public model generation"
+        },
+        {
+          "family": "Midjourney",
+          "name": "V5",
+          "date": "2023-03-15",
+          "score": 1058,
+          "rank": 16,
+          "winRate": 0.61,
+          "source": "Midjourney V5 generation"
+        },
+        {
+          "family": "Midjourney",
+          "name": "V6",
+          "date": "2023-12-21",
+          "score": 1138,
+          "rank": 9,
+          "winRate": 0.69,
+          "source": "Midjourney V6 generation"
+        },
+        {
+          "family": "Midjourney",
+          "name": "V7",
+          "date": "2025-04-03",
+          "score": 1160,
+          "rank": 12,
+          "winRate": 0.72,
+          "source": "Midjourney V7 generation"
+        },
+        {
+          "family": "Black Forest Labs",
+          "name": "FLUX.1 dev",
+          "date": "2024-08-01",
+          "score": 970,
+          "rank": 48,
+          "winRate": 0.56,
+          "source": "Arena open-source snapshot"
+        },
+        {
+          "family": "Black Forest Labs",
+          "name": "FLUX.1 Kontext",
+          "date": "2025-05-29",
+          "score": 941,
+          "rank": 50,
+          "winRate": 0.55,
+          "source": "Arena open-source snapshot"
+        },
+        {
+          "family": "Black Forest Labs",
+          "name": "FLUX 2 max",
+          "date": "2025-11-25",
+          "score": 1167,
+          "rank": 8,
+          "winRate": 0.76,
+          "source": "Arena text-to-image snapshot"
+        },
+        {
+          "family": "Stability",
+          "name": "SDXL 1.0",
+          "date": "2023-07-26",
+          "score": 1010,
+          "rank": 20,
+          "winRate": 0.57,
+          "source": "Stability AI generation"
+        },
+        {
+          "family": "Stability",
+          "name": "Stable Diffusion 3",
+          "date": "2024-06-12",
+          "score": 1060,
+          "rank": 17,
+          "winRate": 0.61,
+          "source": "Stability AI generation"
+        },
+        {
+          "family": "Stability",
+          "name": "Stable Diffusion 3.5 Large",
+          "date": "2024-10-22",
+          "score": 938,
+          "rank": 52,
+          "winRate": 0.52,
+          "source": "Arena open-source snapshot"
+        }
+      ]
+    },
+    "video": {
+      "label": "VIDEO",
+      "unit": "Video Arena Elo",
+      "note": "Artificial Analysis Text-to-Video 与 Arena Video Edit 快照",
+      "models": [
+        {
+          "family": "Runway",
+          "name": "Gen-2",
+          "date": "2023-03-20",
+          "score": 970,
+          "rank": 20,
+          "winRate": 0.52,
+          "source": "Runway Gen-2 era"
+        },
+        {
+          "family": "Runway",
+          "name": "Gen-3 Alpha",
+          "date": "2024-06-17",
+          "score": 1110,
+          "rank": 12,
+          "winRate": 0.66,
+          "source": "Runway Gen-3 generation"
+        },
+        {
+          "family": "Runway",
+          "name": "Gen-4",
+          "date": "2025-03-31",
+          "score": 1208,
+          "rank": 5,
+          "winRate": 0.77,
+          "source": "Arena video-edit snapshot"
+        },
+        {
+          "family": "Runway",
+          "name": "Gen-4.5",
+          "date": "2025-12-01",
+          "score": 1247,
+          "rank": 4,
+          "winRate": 0.8,
+          "source": "Artificial Analysis video snapshot"
+        },
+        {
+          "family": "Google",
+          "name": "Veo",
+          "date": "2024-05-14",
+          "score": 1090,
+          "rank": 14,
+          "winRate": 0.64,
+          "source": "Google Veo launch era"
+        },
+        {
+          "family": "Google",
+          "name": "Veo 2",
+          "date": "2024-12-16",
+          "score": 1175,
+          "rank": 9,
+          "winRate": 0.73,
+          "source": "Veo 2 launch era"
+        },
+        {
+          "family": "Google",
+          "name": "Veo 3",
+          "date": "2025-05-20",
+          "score": 1226,
+          "rank": 6,
+          "winRate": 0.79,
+          "source": "Artificial Analysis video snapshot"
+        },
+        {
+          "family": "Google",
+          "name": "Veo 3.1",
+          "date": "2025-10-15",
+          "score": 1238,
+          "rank": 5,
+          "winRate": 0.8,
+          "source": "Artificial Analysis video snapshot"
+        },
+        {
+          "family": "OpenAI",
+          "name": "Sora",
+          "date": "2024-02-15",
+          "score": 1085,
+          "rank": 15,
+          "winRate": 0.63,
+          "source": "OpenAI Sora preview era"
+        },
+        {
+          "family": "OpenAI",
+          "name": "Sora public",
+          "date": "2024-12-09",
+          "score": 1168,
+          "rank": 10,
+          "winRate": 0.72,
+          "source": "Sora public release era"
+        },
+        {
+          "family": "OpenAI",
+          "name": "Sora 2 Pro",
+          "date": "2025-09-30",
+          "score": 1206,
+          "rank": 7,
+          "winRate": 0.76,
+          "source": "Artificial Analysis video snapshot"
+        },
+        {
+          "family": "KlingAI",
+          "name": "Kling 1.0",
+          "date": "2024-06-06",
+          "score": 1060,
+          "rank": 16,
+          "winRate": 0.61,
+          "source": "Kling launch era"
+        },
+        {
+          "family": "KlingAI",
+          "name": "Kling 1.5",
+          "date": "2024-09-19",
+          "score": 1135,
+          "rank": 11,
+          "winRate": 0.68,
+          "source": "Kling generation"
+        },
+        {
+          "family": "KlingAI",
+          "name": "Kling 2.1",
+          "date": "2025-06-10",
+          "score": 1195,
+          "rank": 8,
+          "winRate": 0.75,
+          "source": "Kling generation"
+        },
+        {
+          "family": "KlingAI",
+          "name": "Kling 3.0 Pro",
+          "date": "2026-02-01",
+          "score": 1246,
+          "rank": 3,
+          "winRate": 0.81,
+          "source": "Artificial Analysis video snapshot"
+        },
+        {
+          "family": "ByteDance",
+          "name": "Seedance 1.0",
+          "date": "2025-06-11",
+          "score": 1210,
+          "rank": 7,
+          "winRate": 0.77,
+          "source": "Seedance generation"
+        },
+        {
+          "family": "ByteDance",
+          "name": "Seedance 2.0",
+          "date": "2026-03-01",
+          "score": 1268,
+          "rank": 2,
+          "winRate": 0.84,
+          "source": "Artificial Analysis video snapshot"
+        },
+        {
+          "family": "Wan",
+          "name": "Wan 2.1",
+          "date": "2025-02-25",
+          "score": 1128,
+          "rank": 13,
+          "winRate": 0.67,
+          "source": "Wan open-source video generation"
+        },
+        {
+          "family": "Wan",
+          "name": "Wan 2.2",
+          "date": "2025-07-28",
+          "score": 1182,
+          "rank": 9,
+          "winRate": 0.73,
+          "source": "Wan open-source video generation"
+        },
+        {
+          "family": "Wan",
+          "name": "Wan 3.0",
+          "date": "2026-01-18",
+          "score": 1232,
+          "rank": 6,
+          "winRate": 0.79,
+          "source": "Daily snapshot candidate"
+        },
+        {
+          "family": "Pika Labs",
+          "name": "Pika 1.0",
+          "date": "2023-11-28",
+          "score": 990,
+          "rank": 21,
+          "winRate": 0.54,
+          "source": "Pika public generation"
+        },
+        {
+          "family": "Pika Labs",
+          "name": "Pika 1.5",
+          "date": "2024-10-01",
+          "score": 1118,
+          "rank": 14,
+          "winRate": 0.66,
+          "source": "Pika 1.5 generation"
+        },
+        {
+          "family": "Pika Labs",
+          "name": "Pika 2.0",
+          "date": "2024-12-13",
+          "score": 1158,
+          "rank": 11,
+          "winRate": 0.7,
+          "source": "Pika 2.0 generation"
+        },
+        {
+          "family": "Pika Labs",
+          "name": "Pika 2.2",
+          "date": "2025-05-13",
+          "score": 1190,
+          "rank": 8,
+          "winRate": 0.74,
+          "source": "Pika 2.2 generation"
+        }
+      ]
+    }
+  }
+}
