@@ -215,7 +215,7 @@ function drawChart(sectionKey) {
   const familyCount = new Set(section.models.map((node) => node.family)).size;
   const legendColumns = Math.max(1, Math.floor((width - 92) / 128));
   const legendRows = Math.ceil(familyCount / legendColumns);
-  const margin = { top: 24 + legendRows * 18, right: 30, bottom: 54, left: 62 };
+  const margin = { top: 14 + legendRows * 16, right: 30, bottom: 8, left: 62 };
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
   const nodes = sortAndOffset(section.models);
@@ -245,7 +245,7 @@ function drawChart(sectionKey) {
       ${yTicks.map((tick) => `<line x1="${margin.left}" x2="${margin.left + innerWidth}" y1="${y(tick)}" y2="${y(tick)}"></line>`).join("")}
     </g>
     <g class="axis">
-      ${yearTicks.map((year) => `<text x="${x(dateValue(`${year}-01-01`))}" y="${height - 18}" text-anchor="middle">${year}</text>`).join("")}
+      ${yearTicks.map((year) => `<text x="${x(dateValue(`${year}-01-01`))}" y="${height - 3}" text-anchor="middle">${year}</text>`).join("")}
       ${yTicks.map((tick) => `<text x="${margin.left - 12}" y="${y(tick) + 4}" text-anchor="end">${formatMetric(tick, activeMetric)}</text>`).join("")}
     </g>
     <line x1="${margin.left}" x2="${margin.left + innerWidth}" y1="${margin.top + innerHeight}" y2="${margin.top + innerHeight}" stroke="#9da7a4"></line>
@@ -273,7 +273,7 @@ function drawChart(sectionKey) {
       ${Object.keys(groups)
         .map((family, index) => {
           const lx = margin.left + (index % legendColumns) * 128;
-          const ly = 18 + Math.floor(index / legendColumns) * 18;
+          const ly = 9 + Math.floor(index / legendColumns) * 16;
           return `<circle cx="${lx}" cy="${ly}" r="5" fill="${colors[family] || "#555"}"></circle><text x="${lx + 10}" y="${ly + 4}" fill="#566" font-size="12">${family}</text>`;
         })
         .join("")}
