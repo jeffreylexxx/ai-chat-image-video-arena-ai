@@ -9,22 +9,22 @@ const sources = [
     section: "chat",
     url: "https://arena.ai/leaderboard/text",
     patterns: [
-      { family: "Meta", regex: /\b(?:Llama|Muse Spark)\s*[A-Za-z0-9.\- ]*/gi },
-      { family: "DeepSeek", regex: /\bDeepSeek[-\s]?[A-Za-z0-9.\- ]*/gi },
-      { family: "Qwen", regex: /\bQwen\s*[A-Za-z0-9.\- ]*/gi },
-      { family: "Kimi", regex: /\bKimi\s*[A-Za-z0-9.\- ]*/gi },
-      { family: "MiniMax", regex: /\bMiniMax[-\s]?[A-Za-z0-9.\- ]*/gi },
+      { family: "Meta", regex: /\b(?:Llama\s*\d+(?:\.\d+)?(?:\s*(?:Maverick|Scout|Instruct|Chat|405B|70B|8B))?|Muse Spark(?:\s*\d+(?:\.\d+)?)?)\b/gi },
+      { family: "DeepSeek", regex: /\bDeepSeek[-\s]?(?:V|R)\d+(?:\.\d+)?(?:[-\s]?(?:Chat|Reasoner|Thinking|Preview|Instruct))?\b/gi },
+      { family: "Qwen", regex: /\bQwen\d+(?:\.\d+)?(?:[-\s]?(?:Max|Plus|Coder|VL|Omni|Thinking|Instruct|Chat))?\b/gi },
+      { family: "Kimi", regex: /\bKimi[-\s]?(?:K|k)?\d+(?:\.\d+)?(?:[-\s]?(?:Thinking|Turbo|Preview|Instruct))?\b/gi },
+      { family: "MiniMax", regex: /\bMiniMax[-\s]?(?:M|Text|01|abab)?\d+(?:\.\d+)?(?:[-\s]?(?:Preview|Instruct|Chat))?\b/gi },
     ],
   },
   {
     section: "chat",
     url: "https://lmarena.ai/leaderboard",
     patterns: [
-      { family: "Meta", regex: /\b(?:Llama|Muse Spark)\s*[A-Za-z0-9.\- ]*/gi },
-      { family: "DeepSeek", regex: /\bDeepSeek[-\s]?[A-Za-z0-9.\- ]*/gi },
-      { family: "Qwen", regex: /\bQwen\s*[A-Za-z0-9.\- ]*/gi },
-      { family: "Kimi", regex: /\bKimi\s*[A-Za-z0-9.\- ]*/gi },
-      { family: "MiniMax", regex: /\bMiniMax[-\s]?[A-Za-z0-9.\- ]*/gi },
+      { family: "Meta", regex: /\b(?:Llama\s*\d+(?:\.\d+)?(?:\s*(?:Maverick|Scout|Instruct|Chat|405B|70B|8B))?|Muse Spark(?:\s*\d+(?:\.\d+)?)?)\b/gi },
+      { family: "DeepSeek", regex: /\bDeepSeek[-\s]?(?:V|R)\d+(?:\.\d+)?(?:[-\s]?(?:Chat|Reasoner|Thinking|Preview|Instruct))?\b/gi },
+      { family: "Qwen", regex: /\bQwen\d+(?:\.\d+)?(?:[-\s]?(?:Max|Plus|Coder|VL|Omni|Thinking|Instruct|Chat))?\b/gi },
+      { family: "Kimi", regex: /\bKimi[-\s]?(?:K|k)?\d+(?:\.\d+)?(?:[-\s]?(?:Thinking|Turbo|Preview|Instruct))?\b/gi },
+      { family: "MiniMax", regex: /\bMiniMax[-\s]?(?:M|Text|01|abab)?\d+(?:\.\d+)?(?:[-\s]?(?:Preview|Instruct|Chat))?\b/gi },
     ],
   },
   {
@@ -65,6 +65,7 @@ const sources = [
 
 let additions = 0;
 const sourceReports = [];
+const addedFamilies = new Set();
 
 for (const source of sources) {
   try {
@@ -74,8 +75,13 @@ for (const source of sources) {
     for (const pattern of source.patterns) {
       for (const match of text.matchAll(pattern.regex)) {
         const name = canonicalName(pattern.family, match[0]);
-        if (!name || name.length > 46 || alreadyExists(source.section, pattern.family, name)) continue;
+        const familyKey = `${source.section}:${pattern.family}`;
+        if (addedFamilies.has(familyKey)) continue;
+        if (!isCleanCandidate(source.section, pattern.family, name)) continue;
+        if (!isNewerThanFamilyMainline(source.section, pattern.family, name)) continue;
+        if (alreadyExists(source.section, pattern.family, name)) continue;
         addDiscoveredModel(source.section, pattern.family, name, publishedDate, source.url);
+        addedFamilies.add(familyKey);
         additions += 1;
       }
     }
@@ -147,6 +153,10 @@ function canonicalName(family, raw) {
   }
   if (family === "Pika Labs") return cleaned.replace(/^Pika\b/i, "Pika");
   if (family === "Wan") return cleaned.replace(/^Wan\b/i, "Wan");
+  if (family === "Qwen") return cleaned.replace(/^qwen/i, "Qwen").replace(/[-\s]max$/i, " Max");
+  if (family === "Kimi") return cleaned.replace(/^kimi/i, "Kimi").replace(/[-\s]preview$/i, " Preview");
+  if (family === "DeepSeek") return cleaned.replace(/^deepseek/i, "DeepSeek");
+  if (family === "MiniMax") return cleaned.replace(/^minimax/i, "MiniMax");
   return cleaned;
 }
 
@@ -154,6 +164,52 @@ function alreadyExists(section, family, name) {
   return snapshot.sections[section].models.some(
     (model) => model.family.toLowerCase() === family.toLowerCase() && model.name.toLowerCase() === name.toLowerCase(),
   );
+}
+
+function isCleanCandidate(section, family, name) {
+  if (!name || name.length > 42) return false;
+  const allowedBrands = {
+    Meta: ["llama", "muse spark"],
+    DeepSeek: ["deepseek"],
+    Qwen: ["qwen"],
+    Kimi: ["kimi"],
+    MiniMax: ["minimax"],
+  }[family] || [];
+  const lowered = allowedBrands.reduce((value, brand) => value.replaceAll(brand, ""), name.toLowerCase());
+  if (/\b(?:gpt|claude|gemini|grok|llama|qwen|deepseek|minimax|kimi|sora|veo|runway|kling)\b/i.test(lowered)) {
+    return false;
+  }
+  if (section === "image" && family === "Google Nano Banana") return /^Nano Banana(?: Pro| \d+(?:\.\d+)?)$/i.test(name);
+  if (section === "video" && family === "Wan") return /^Wan \d+(?:\.\d+)?$/i.test(name);
+  if (section === "video" && family === "Pika Labs") return /^Pika \d+(?:\.\d+)?$/i.test(name);
+  if (!hasReasonableVersion(family, name)) return false;
+  return /\d/.test(name) || /Muse Spark/i.test(name);
+}
+
+function hasReasonableVersion(family, name) {
+  if (/Muse Spark/i.test(name)) return true;
+  const version = versionNumber(name);
+  if (version === 0) return false;
+  if (family === "Meta" && /llama/i.test(name)) return version >= 2 && version <= 10;
+  if (["DeepSeek", "Qwen", "Kimi", "MiniMax", "Wan", "Pika Labs", "Google Nano Banana"].includes(family)) {
+    return version > 0 && version <= 10;
+  }
+  return version > 0 && version <= 20;
+}
+
+function isNewerThanFamilyMainline(section, family, name) {
+  const currentVersions = snapshot.sections[section].models
+    .filter((model) => model.family === family)
+    .map((model) => versionNumber(model.name))
+    .filter((version) => version > 0);
+  const candidateVersion = versionNumber(name);
+  if (candidateVersion === 0) return !alreadyExists(section, family, name);
+  return candidateVersion > Math.max(0, ...currentVersions);
+}
+
+function versionNumber(name) {
+  const version = name.match(/\d+(?:\.\d+)?/)?.[0];
+  return version ? Number(version) : 0;
 }
 
 function addDiscoveredModel(section, family, name, date, url) {
