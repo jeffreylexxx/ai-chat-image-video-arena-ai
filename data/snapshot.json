@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T10:11:17.469Z",
+  "generatedAt": "2026-05-11T04:10:06.576Z",
   "schemaVersion": 1,
   "sourcePolicy": "Daily snapshot generated from embedded seed plus updater discoveries. Scores mix leaderboard snapshots and normalized historical estimates.",
   "sections": {
@@ -394,6 +394,15 @@
           "rank": 10,
           "winRate": 0.84,
           "source": "Daily snapshot candidate"
+        },
+        {
+          "family": "Qwen",
+          "name": "Qwen3.6 Max",
+          "date": "2025-02-27",
+          "score": 1482,
+          "rank": 6,
+          "winRate": 0.86,
+          "source": "Auto-discovered from arena.ai"
         }
       ]
     },
@@ -831,8 +840,59 @@
           "rank": 8,
           "winRate": 0.74,
           "source": "Pika 2.2 generation"
+        },
+        {
+          "family": "Pika Labs",
+          "name": "Pika 2.5",
+          "date": "2026-04-07",
+          "score": 1202,
+          "rank": 7,
+          "winRate": 0.75,
+          "source": "Auto-discovered from artificialanalysis.ai"
         }
       ]
     }
-  }
+  },
+  "updateHistory": [
+    {
+      "date": "2026-05-11T04:10:06.576Z",
+      "additions": 2,
+      "sources": [
+        {
+          "url": "https://arena.ai/leaderboard/text",
+          "ok": true
+        },
+        {
+          "url": "https://lmarena.ai/leaderboard",
+          "ok": true
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
+          "ok": true
+        },
+        {
+          "url": "https://gemini.google/overview/image-generation/",
+          "ok": true
+        },
+        {
+          "url": "https://arena.ai/leaderboard/text-to-image",
+          "ok": true
+        },
+        {
+          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
+          "ok": true
+        },
+        {
+          "url": "https://arena.ai/leaderboard/video-edit",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "date": "2026-05-11T04:09:38.298Z",
+      "additions": 0,
+      "sources": [],
+      "note": "Clean baseline regenerated after tightening daily discovery filters."
+    }
+  ]
 }
