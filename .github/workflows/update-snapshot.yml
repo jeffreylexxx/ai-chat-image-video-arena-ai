@@ -1,6 +1,18 @@
 name: Daily snapshot and Pages deploy
 
 on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - ".github/workflows/update-snapshot.yml"
+      - "scripts/update-snapshot.mjs"
+      - "data/snapshot.json"
+      - "index.html"
+      - "app.js"
+      - "styles.css"
+      - "package.json"
   schedule:
     # Runs daily at 02:10 Asia/Shanghai.
     - cron: "10 18 * * *"
