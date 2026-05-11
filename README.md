@@ -49,19 +49,20 @@ npm run check
 
 1. 把本项目推送到 GitHub 仓库。
 2. 进入仓库的 **Settings → Pages**。
-3. Source 选择 `Deploy from a branch`。
-4. Branch 选择 `main`，目录选择 `/root`。
-5. 保存后等待 GitHub Pages 构建完成。
+3. Source 选择 `GitHub Actions`。
+4. 进入 **Actions**，手动运行一次 `Daily snapshot and Pages deploy`。
+5. 等待 workflow 完成后，页面会由 Actions 直接部署。
 
 ## 每日自动更新
 
-仓库包含 `.github/workflows/update-snapshot.yml`。它会在每天 UTC 18:10 运行一次：
+仓库包含 `.github/workflows/update-snapshot.yml`。它会在每天 UTC 18:10，也就是北京时间 02:10，运行一次：
 
 1. 使用 Node.js 执行 `scripts/update-snapshot.mjs`。
 2. 抓取公开 leaderboard 和模型发布页。
 3. 对 watchlist 中的新模型名称做识别。
 4. 更新 `data/snapshot.json`。
-5. 如果快照变化，则自动提交到仓库。
+5. 自动提交每日快照。
+6. 上传静态站点 artifact，并用 `actions/deploy-pages` 直接部署到 GitHub Pages。
 
 默认数据抓取目标包括：
 
