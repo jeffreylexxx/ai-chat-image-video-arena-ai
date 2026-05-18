@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-17T19:24:17.970Z",
+  "generatedAt": "2026-05-18T20:01:02.954Z",
   "schemaVersion": 1,
   "sourcePolicy": "Daily snapshot generated from embedded seed plus updater discoveries. Scores mix leaderboard snapshots and normalized historical estimates.",
   "sections": {
@@ -398,6 +398,15 @@
         {
           "family": "Qwen",
           "name": "Qwen3.6 Max",
+          "date": "2025-02-27",
+          "score": 1482,
+          "rank": 6,
+          "winRate": 0.86,
+          "source": "Auto-discovered from arena.ai"
+        },
+        {
+          "family": "Qwen",
+          "name": "Qwen3.7 Max",
           "date": "2025-02-27",
           "score": 1482,
           "rank": 6,
@@ -854,6 +863,40 @@
     }
   },
   "updateHistory": [
+    {
+      "date": "2026-05-18T20:01:02.954Z",
+      "additions": 1,
+      "sources": [
+        {
+          "url": "https://arena.ai/leaderboard/text",
+          "ok": true
+        },
+        {
+          "url": "https://lmarena.ai/leaderboard",
+          "ok": true
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
+          "ok": true
+        },
+        {
+          "url": "https://gemini.google/overview/image-generation/",
+          "ok": true
+        },
+        {
+          "url": "https://arena.ai/leaderboard/text-to-image",
+          "ok": true
+        },
+        {
+          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
+          "ok": true
+        },
+        {
+          "url": "https://arena.ai/leaderboard/video-edit",
+          "ok": true
+        }
+      ]
+    },
     {
       "date": "2026-05-17T19:24:17.970Z",
       "additions": 0,
