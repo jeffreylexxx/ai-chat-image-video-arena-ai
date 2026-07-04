@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T19:44:14.215Z",
+  "generatedAt": "2026-07-04T19:34:04.538Z",
   "schemaVersion": 1,
   "sourcePolicy": "Daily snapshot generated from embedded seed plus updater discoveries. Scores mix leaderboard snapshots and normalized historical estimates.",
   "sections": {
@@ -864,6 +864,40 @@
   },
   "updateHistory": [
     {
+      "date": "2026-07-04T19:34:04.538Z",
+      "additions": 0,
+      "sources": [
+        {
+          "url": "https://arena.ai/leaderboard/text",
+          "ok": true
+        },
+        {
+          "url": "https://lmarena.ai/leaderboard",
+          "ok": true
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
+          "ok": true
+        },
+        {
+          "url": "https://gemini.google/overview/image-generation/",
+          "ok": true
+        },
+        {
+          "url": "https://arena.ai/leaderboard/text-to-image",
+          "ok": true
+        },
+        {
+          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
+          "ok": true
+        },
+        {
+          "url": "https://arena.ai/leaderboard/video-edit",
+          "ok": true
+        }
+      ]
+    },
+    {
       "date": "2026-07-03T19:44:14.215Z",
       "additions": 0,
       "sources": [
@@ -1273,40 +1307,6 @@
     },
     {
       "date": "2026-06-21T19:58:43.325Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-06-20T19:52:06.052Z",
       "additions": 0,
       "sources": [
         {
