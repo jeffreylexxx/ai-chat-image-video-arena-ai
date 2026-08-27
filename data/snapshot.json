@@ -1,1352 +1,3670 @@
 {
-  "generatedAt": "2026-08-26T19:58:26.954Z",
-  "schemaVersion": 1,
-  "sourcePolicy": "Daily snapshot generated from embedded seed plus updater discoveries. Scores mix leaderboard snapshots and normalized historical estimates.",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-27T01:36:06.995Z",
+  "dataAsOf": "2026-08-26",
   "sections": {
     "chat": {
       "label": "CHAT",
       "unit": "Arena score",
-      "note": "Text Arena / LMArena 快照与历史归一化节点",
+      "note": "https://arena.ai/leaderboard/text · fetched 2026-08-26T02:50:08.801755+00:00",
+      "leaderboard": "text",
+      "sourceUrl": "https://arena.ai/leaderboard/text",
+      "sourceFetchedAt": "2026-08-26T02:50:08.801755+00:00",
+      "sourceLastUpdated": "Aug 21, 2026",
+      "currentCount": 50,
       "models": [
         {
-          "family": "OpenAI",
-          "name": "GPT-3.5",
-          "date": "2022-11-30",
-          "score": 1110,
-          "rank": 24,
-          "winRate": 0.55,
-          "source": "ChatGPT public launch era"
-        },
-        {
-          "family": "OpenAI",
-          "name": "GPT-4",
-          "date": "2023-03-14",
-          "score": 1251,
-          "rank": 10,
-          "winRate": 0.66,
-          "source": "OpenAI GPT-4 announcement"
-        },
-        {
-          "family": "OpenAI",
-          "name": "GPT-4 Turbo",
-          "date": "2023-11-06",
-          "score": 1287,
-          "rank": 8,
-          "winRate": 0.69,
-          "source": "OpenAI DevDay generation"
-        },
-        {
-          "family": "OpenAI",
-          "name": "GPT-4o",
-          "date": "2024-05-13",
-          "score": 1354,
-          "rank": 6,
-          "winRate": 0.74,
-          "source": "OpenAI GPT-4o announcement"
-        },
-        {
-          "family": "OpenAI",
-          "name": "o3",
-          "date": "2025-04-16",
-          "score": 1428,
-          "rank": 17,
-          "winRate": 0.81,
-          "source": "Arena text snapshot"
-        },
-        {
-          "family": "OpenAI",
-          "name": "GPT-5.1 high",
-          "date": "2025-11-12",
-          "score": 1458,
-          "rank": 8,
-          "winRate": 0.84,
-          "source": "LMArena overview snapshot"
-        },
-        {
-          "family": "OpenAI",
-          "name": "GPT-5.4 high",
-          "date": "2026-04-09",
-          "score": 1484,
-          "rank": 7,
-          "winRate": 0.86,
-          "source": "Arena text snapshot"
-        },
-        {
+          "id": "text:claude-fable-5",
           "family": "Anthropic",
-          "name": "Claude 2",
-          "date": "2023-07-11",
-          "score": 1180,
-          "rank": 19,
-          "winRate": 0.59,
-          "source": "Anthropic release line"
+          "name": "claude-fable-5",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1508,
+          "rank": 1,
+          "votes": 24331,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
+          "id": "text:claude-opus-4-6-high",
           "family": "Anthropic",
-          "name": "Claude 3 Opus",
-          "date": "2024-03-04",
-          "score": 1248,
-          "rank": 12,
-          "winRate": 0.65,
-          "source": "Claude 3 family"
-        },
-        {
-          "family": "Anthropic",
-          "name": "Claude 3.5 Sonnet",
-          "date": "2024-06-20",
-          "score": 1308,
-          "rank": 9,
-          "winRate": 0.71,
-          "source": "Claude 3.5 Sonnet announcement"
-        },
-        {
-          "family": "Anthropic",
-          "name": "Claude Sonnet 4.5",
-          "date": "2025-09-29",
-          "score": 1450,
-          "rank": 10,
-          "winRate": 0.83,
-          "source": "LMArena overview snapshot"
-        },
-        {
-          "family": "Anthropic",
-          "name": "Claude Opus 4.6 thinking",
-          "date": "2026-04-09",
+          "name": "claude-opus-4-6-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
           "score": 1504,
-          "rank": 1,
-          "winRate": 0.88,
-          "source": "Arena text snapshot"
+          "rank": 2,
+          "votes": 72359,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "Google",
-          "name": "Gemini Pro",
-          "date": "2023-12-06",
-          "score": 1187,
-          "rank": 18,
-          "winRate": 0.6,
-          "source": "Gemini launch"
-        },
-        {
-          "family": "Google",
-          "name": "Gemini 1.5 Pro",
-          "date": "2024-02-15",
-          "score": 1260,
-          "rank": 11,
-          "winRate": 0.66,
-          "source": "Gemini 1.5 Pro announcement"
-        },
-        {
-          "family": "Google",
-          "name": "Gemini 2.5 Pro",
-          "date": "2025-03-25",
-          "score": 1451,
-          "rank": 9,
-          "winRate": 0.83,
-          "source": "LMArena overview snapshot"
-        },
-        {
-          "family": "Google",
-          "name": "Gemini 3 Pro",
-          "date": "2025-11-18",
-          "score": 1490,
-          "rank": 1,
-          "winRate": 0.87,
-          "source": "LMArena overview snapshot"
-        },
-        {
-          "family": "Google",
-          "name": "Gemini 3.1 Pro preview",
-          "date": "2026-04-09",
-          "score": 1492,
+          "id": "text:claude-opus-4-7-high",
+          "family": "Anthropic",
+          "name": "claude-opus-4-7-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1502,
           "rank": 3,
-          "winRate": 0.87,
-          "source": "Arena text snapshot"
+          "votes": 60203,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "xAI",
-          "name": "Grok-1",
-          "date": "2023-11-04",
-          "score": 1160,
-          "rank": 22,
-          "winRate": 0.57,
-          "source": "xAI launch era"
+          "id": "text:muse-spark-1.2-(xhigh)",
+          "family": "Meta",
+          "name": "muse-spark-1.2 (xHigh)",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1498,
+          "rank": 4,
+          "votes": 3257,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "xAI",
-          "name": "Grok-2",
-          "date": "2024-08-13",
-          "score": 1280,
-          "rank": 15,
-          "winRate": 0.67,
-          "source": "xAI Grok-2 era"
-        },
-        {
-          "family": "xAI",
-          "name": "Grok-3",
-          "date": "2025-02-17",
-          "score": 1402,
-          "rank": 13,
-          "winRate": 0.78,
-          "source": "Grok-3 era"
-        },
-        {
-          "family": "xAI",
-          "name": "Grok-4.1 thinking",
-          "date": "2025-12-01",
-          "score": 1477,
-          "rank": 3,
-          "winRate": 0.85,
-          "source": "LMArena overview snapshot"
-        },
-        {
-          "family": "xAI",
-          "name": "Grok-4.20 beta1",
-          "date": "2026-04-09",
-          "score": 1486,
+          "id": "text:claude-opus-4-6",
+          "family": "Anthropic",
+          "name": "claude-opus-4-6",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1497,
           "rank": 5,
-          "winRate": 0.86,
-          "source": "Arena text snapshot"
+          "votes": 76362,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "Meta",
-          "name": "Llama 2 Chat",
-          "date": "2023-07-18",
-          "score": 1120,
-          "rank": 30,
-          "winRate": 0.55,
-          "source": "Meta Llama open model generation"
-        },
-        {
-          "family": "Meta",
-          "name": "Llama 3 70B Instruct",
-          "date": "2024-04-18",
-          "score": 1210,
-          "rank": 23,
-          "winRate": 0.62,
-          "source": "Meta Llama 3 release"
-        },
-        {
-          "family": "Meta",
-          "name": "Llama 3.1 405B Instruct",
-          "date": "2024-07-23",
-          "score": 1278,
-          "rank": 18,
-          "winRate": 0.68,
-          "source": "Meta Llama 3.1 release"
-        },
-        {
-          "family": "Meta",
-          "name": "Llama 4 Maverick",
-          "date": "2025-04-05",
-          "score": 1352,
-          "rank": 16,
-          "winRate": 0.74,
-          "source": "Meta Llama 4 release"
-        },
-        {
-          "family": "Meta",
-          "name": "Muse Spark",
-          "date": "2026-04-08",
-          "score": 1468,
+          "id": "text:claude-opus-4-7",
+          "family": "Anthropic",
+          "name": "claude-opus-4-7",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1494,
           "rank": 6,
-          "winRate": 0.85,
-          "source": "Meta Muse Spark announcement"
+          "votes": 61304,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "DeepSeek",
-          "name": "DeepSeek-V2",
-          "date": "2024-05-07",
-          "score": 1222,
-          "rank": 21,
-          "winRate": 0.64,
-          "source": "DeepSeek V2 generation"
-        },
-        {
-          "family": "DeepSeek",
-          "name": "DeepSeek-V3",
-          "date": "2024-12-26",
-          "score": 1350,
-          "rank": 15,
-          "winRate": 0.75,
-          "source": "DeepSeek V3 release"
-        },
-        {
-          "family": "DeepSeek",
-          "name": "DeepSeek-R1",
-          "date": "2025-01-20",
-          "score": 1418,
-          "rank": 12,
-          "winRate": 0.8,
-          "source": "DeepSeek R1 release"
-        },
-        {
-          "family": "DeepSeek",
-          "name": "DeepSeek-V4",
-          "date": "2026-03-15",
-          "score": 1472,
-          "rank": 5,
-          "winRate": 0.85,
-          "source": "Daily snapshot candidate"
-        },
-        {
-          "family": "Qwen",
-          "name": "Qwen1.5 72B Chat",
-          "date": "2024-02-05",
-          "score": 1195,
-          "rank": 26,
-          "winRate": 0.61,
-          "source": "Qwen 1.5 generation"
-        },
-        {
-          "family": "Qwen",
-          "name": "Qwen2.5 Max",
-          "date": "2025-01-29",
-          "score": 1390,
-          "rank": 14,
-          "winRate": 0.78,
-          "source": "Qwen 2.5 Max release"
-        },
-        {
-          "family": "Qwen",
-          "name": "Qwen3 Max",
-          "date": "2025-09-05",
-          "score": 1455,
-          "rank": 9,
-          "winRate": 0.83,
-          "source": "Daily snapshot candidate"
-        },
-        {
-          "family": "Qwen",
-          "name": "Qwen3.5 Max",
-          "date": "2026-03-20",
-          "score": 1470,
+          "id": "text:claude-opus-5-high",
+          "family": "Anthropic",
+          "name": "claude-opus-5-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1493,
           "rank": 7,
-          "winRate": 0.85,
-          "source": "Daily snapshot candidate"
+          "votes": 27610,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "Kimi",
-          "name": "Kimi Chat",
-          "date": "2023-10-09",
-          "score": 1165,
-          "rank": 29,
-          "winRate": 0.58,
-          "source": "Moonshot Kimi launch era"
+          "id": "text:muse-spark-1.1",
+          "family": "Meta",
+          "name": "muse-spark-1.1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1491,
+          "rank": 8,
+          "votes": 20242,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "Kimi",
-          "name": "Kimi k1.5",
-          "date": "2025-01-20",
-          "score": 1385,
-          "rank": 15,
-          "winRate": 0.77,
-          "source": "Kimi k-series generation"
+          "id": "text:gemini-3.7-flash-high",
+          "family": "Google",
+          "name": "gemini-3.7-flash-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1490,
+          "rank": 9,
+          "votes": 5718,
+          "ci": 8,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "Kimi",
-          "name": "Kimi K2",
-          "date": "2025-07-11",
-          "score": 1446,
-          "rank": 11,
-          "winRate": 0.82,
-          "source": "Kimi K2 release"
-        },
-        {
-          "family": "Kimi",
-          "name": "Kimi K3",
-          "date": "2026-02-10",
-          "score": 1475,
-          "rank": 6,
-          "winRate": 0.85,
-          "source": "Daily snapshot candidate"
-        },
-        {
-          "family": "MiniMax",
-          "name": "abab6.5",
-          "date": "2023-09-05",
-          "score": 1145,
-          "rank": 31,
-          "winRate": 0.56,
-          "source": "MiniMax abab generation"
-        },
-        {
-          "family": "MiniMax",
-          "name": "MiniMax-Text-01",
-          "date": "2025-01-15",
-          "score": 1368,
-          "rank": 16,
-          "winRate": 0.76,
-          "source": "MiniMax Text-01 release"
-        },
-        {
-          "family": "MiniMax",
-          "name": "MiniMax-M1",
-          "date": "2025-06-16",
-          "score": 1430,
-          "rank": 13,
-          "winRate": 0.8,
-          "source": "MiniMax M1 generation"
-        },
-        {
-          "family": "MiniMax",
-          "name": "MiniMax-M2",
-          "date": "2026-02-01",
-          "score": 1462,
+          "id": "text:kimi-k3-max",
+          "family": "Kimi / Moonshot",
+          "name": "kimi-k3-max",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1489,
           "rank": 10,
-          "winRate": 0.84,
-          "source": "Daily snapshot candidate"
+          "votes": 15054,
+          "ci": 6,
+          "license": null,
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "Qwen",
-          "name": "Qwen3.6 Max",
-          "date": "2025-02-27",
-          "score": 1482,
-          "rank": 6,
-          "winRate": 0.86,
-          "source": "Auto-discovered from arena.ai"
+          "id": "text:muse-spark",
+          "family": "Meta",
+          "name": "muse-spark",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1488,
+          "rank": 11,
+          "votes": 13584,
+          "ci": 6,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "Qwen",
-          "name": "Qwen3.7 Max",
-          "date": "2025-02-27",
-          "score": 1482,
-          "rank": 6,
-          "winRate": 0.86,
-          "source": "Auto-discovered from arena.ai"
+          "id": "text:claude-opus-5-max",
+          "family": "Anthropic",
+          "name": "claude-opus-5-max",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1487,
+          "rank": 12,
+          "votes": 13403,
+          "ci": 6,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         },
         {
-          "family": "Qwen",
-          "name": "Qwen3.8 Max",
-          "date": "2025-02-27",
+          "id": "text:glm-5.3-max",
+          "family": "Z.ai",
+          "name": "glm-5.3-max",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1487,
+          "rank": 13,
+          "votes": 3751,
+          "ci": 10,
+          "license": "open",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gemini-3.1-pro-preview",
+          "family": "Google",
+          "name": "gemini-3.1-pro-preview",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1486,
+          "rank": 14,
+          "votes": 99182,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gemini-3-pro",
+          "family": "Google",
+          "name": "gemini-3-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1485,
+          "rank": 15,
+          "votes": 41491,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gpt-5.6-sol-xhigh",
+          "family": "OpenAI",
+          "name": "gpt-5.6-sol-xhigh",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
           "score": 1482,
-          "rank": 6,
-          "winRate": 0.86,
-          "source": "Auto-discovered from arena.ai"
+          "rank": 16,
+          "votes": 19541,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gpt-5.5-high",
+          "family": "OpenAI",
+          "name": "gpt-5.5-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1482,
+          "rank": 17,
+          "votes": 59545,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:claude-opus-4-8-high",
+          "family": "Anthropic",
+          "name": "claude-opus-4-8-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1482,
+          "rank": 18,
+          "votes": 44676,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:qwen3.8-max",
+          "family": "Qwen / Alibaba",
+          "name": "qwen3.8-max",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1481,
+          "rank": 19,
+          "votes": 9955,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gemini-3.6-flash-high",
+          "family": "Google",
+          "name": "gemini-3.6-flash-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1481,
+          "rank": 20,
+          "votes": 18018,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gemini-3.5-flash-high",
+          "family": "Google",
+          "name": "gemini-3.5-flash-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1478,
+          "rank": 21,
+          "votes": 30004,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gpt-5.4-high",
+          "family": "OpenAI",
+          "name": "gpt-5.4-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1476,
+          "rank": 22,
+          "votes": 60708,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gpt-5.5",
+          "family": "OpenAI",
+          "name": "gpt-5.5",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1476,
+          "rank": 23,
+          "votes": 60896,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gpt-5.2-chat-latest-20260210",
+          "family": "OpenAI",
+          "name": "gpt-5.2-chat-latest-20260210",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1476,
+          "rank": 24,
+          "votes": 34339,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:grok-4.20-beta1",
+          "family": "xAI",
+          "name": "grok-4.20-beta1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1475,
+          "rank": 25,
+          "votes": 26770,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gemini-3.5-flash-medium",
+          "family": "Google",
+          "name": "gemini-3.5-flash-medium",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1474,
+          "rank": 26,
+          "votes": 28343,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:qwen3.7-max-preview",
+          "family": "Qwen / Alibaba",
+          "name": "qwen3.7-max-preview",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1474,
+          "rank": 27,
+          "votes": 3712,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gpt-5.5-instant",
+          "family": "OpenAI",
+          "name": "gpt-5.5-instant",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1474,
+          "rank": 28,
+          "votes": 25863,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:claude-opus-4-8",
+          "family": "Anthropic",
+          "name": "claude-opus-4-8",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1473,
+          "rank": 29,
+          "votes": 45331,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gemini-3-flash",
+          "family": "Google",
+          "name": "gemini-3-flash",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1473,
+          "rank": 30,
+          "votes": 30852,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:claude-opus-4-5-20251101-high-32k",
+          "family": "Anthropic",
+          "name": "claude-opus-4-5-20251101-high-32k",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1473,
+          "rank": 31,
+          "votes": 37198,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:claude-sonnet-4-6",
+          "family": "Anthropic",
+          "name": "claude-sonnet-4-6",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1472,
+          "rank": 32,
+          "votes": 66512,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:grok-4.20-beta-0309-reasoning",
+          "family": "xAI",
+          "name": "grok-4.20-beta-0309-reasoning",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1472,
+          "rank": 33,
+          "votes": 62272,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:glm-5.2-max",
+          "family": "Z.ai",
+          "name": "glm-5.2-max",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1470,
+          "rank": 34,
+          "votes": 30637,
+          "ci": 5,
+          "license": "open",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:grok-4.5",
+          "family": "xAI",
+          "name": "grok-4.5",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1470,
+          "rank": 35,
+          "votes": 22030,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:grok-4.20-multi-agent-beta-0309",
+          "family": "xAI",
+          "name": "grok-4.20-multi-agent-beta-0309",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1470,
+          "rank": 36,
+          "votes": 60864,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:claude-opus-4-5-20251101",
+          "family": "Anthropic",
+          "name": "claude-opus-4-5-20251101",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1469,
+          "rank": 37,
+          "votes": 70985,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:ernie-5.1",
+          "family": "Baidu",
+          "name": "ernie-5.1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1468,
+          "rank": 38,
+          "votes": 37137,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:glm-5.1",
+          "family": "Z.ai",
+          "name": "glm-5.1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1468,
+          "rank": 39,
+          "votes": 42267,
+          "ci": 4,
+          "license": "open",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:mimo-v2.5-pro",
+          "family": "Xiaomi",
+          "name": "mimo-v2.5-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1468,
+          "rank": 40,
+          "votes": 54177,
+          "ci": 4,
+          "license": "open",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gpt-5.4",
+          "family": "OpenAI",
+          "name": "gpt-5.4",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1466,
+          "rank": 41,
+          "votes": 63659,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:grok-4.1-thinking",
+          "family": "xAI",
+          "name": "grok-4.1-thinking",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1466,
+          "rank": 42,
+          "votes": 65550,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:qwen3.5-max-preview",
+          "family": "Qwen / Alibaba",
+          "name": "qwen3.5-max-preview",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1465,
+          "rank": 43,
+          "votes": 21484,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:gpt-5.6-terra-xhigh",
+          "family": "OpenAI",
+          "name": "gpt-5.6-terra-xhigh",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1465,
+          "rank": 44,
+          "votes": 20216,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:claude-sonnet-5-high",
+          "family": "Anthropic",
+          "name": "claude-sonnet-5-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1461,
+          "rank": 45,
+          "votes": 27366,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:grok-4.6-high",
+          "family": "xAI",
+          "name": "grok-4.6-high",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1461,
+          "rank": 46,
+          "votes": 3473,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:kimi-k2.6",
+          "family": "Kimi / Moonshot",
+          "name": "kimi-k2.6",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1461,
+          "rank": 47,
+          "votes": 37543,
+          "ci": 5,
+          "license": "open",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:qwen3.6-max-preview",
+          "family": "Qwen / Alibaba",
+          "name": "qwen3.6-max-preview",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1460,
+          "rank": 48,
+          "votes": 5196,
+          "ci": 8,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:grok-4.1",
+          "family": "xAI",
+          "name": "grok-4.1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1459,
+          "rank": 49,
+          "votes": 67767,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
+        },
+        {
+          "id": "text:deepseek-v4-pro-high-20260813",
+          "family": "DeepSeek",
+          "name": "deepseek-v4-pro-high-20260813",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1459,
+          "rank": 50,
+          "votes": 3621,
+          "ci": 10,
+          "license": "open",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text"
         }
       ]
     },
     "image": {
       "label": "IMAGE",
       "unit": "Image Arena score",
-      "note": "Text-to-image / image edit Arena 快照与历史归一化节点",
+      "note": "https://arena.ai/leaderboard/text-to-image · fetched 2026-08-26T02:50:08.801755+00:00",
+      "leaderboard": "text-to-image",
+      "sourceUrl": "https://arena.ai/leaderboard/text-to-image",
+      "sourceFetchedAt": "2026-08-26T02:50:08.801755+00:00",
+      "sourceLastUpdated": "Aug 25, 2026",
+      "currentCount": 76,
       "models": [
         {
+          "id": "text-to-image:gpt-image-2-(medium)",
           "family": "OpenAI",
-          "name": "DALL-E 2",
-          "date": "2022-04-06",
-          "score": 930,
-          "rank": 26,
-          "winRate": 0.5,
-          "source": "OpenAI image generation era"
-        },
-        {
-          "family": "OpenAI",
-          "name": "DALL-E 3",
-          "date": "2023-09-20",
-          "score": 1085,
-          "rank": 14,
-          "winRate": 0.62,
-          "source": "DALL-E 3 generation"
-        },
-        {
-          "family": "OpenAI",
-          "name": "GPT-image-1",
-          "date": "2025-03-25",
-          "score": 1241,
-          "rank": 2,
-          "winRate": 0.79,
-          "source": "Arena text-to-image snapshot"
-        },
-        {
-          "family": "OpenAI",
-          "name": "GPT-image-1.5",
-          "date": "2026-01-20",
-          "score": 1376,
-          "rank": 5,
-          "winRate": 0.86,
-          "source": "Arena image-edit snapshot"
-        },
-        {
-          "family": "OpenAI",
-          "name": "GPT-image-2",
-          "date": "2026-04-19",
-          "score": 1512,
+          "name": "gpt-image-2 (medium)",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1382,
           "rank": 1,
-          "winRate": 0.9,
-          "source": "Arena text-to-image snapshot"
+          "votes": 75014,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Google",
-          "name": "Imagen 2",
-          "date": "2023-12-13",
-          "score": 1045,
-          "rank": 18,
-          "winRate": 0.59,
-          "source": "Imagen generation"
-        },
-        {
-          "family": "Google",
-          "name": "Imagen 3",
-          "date": "2024-05-14",
-          "score": 1128,
-          "rank": 10,
-          "winRate": 0.68,
-          "source": "Imagen 3 launch era"
-        },
-        {
-          "family": "Google",
-          "name": "Gemini 2.5 Flash Image",
-          "date": "2025-08-26",
-          "score": 1271,
-          "rank": 6,
-          "winRate": 0.82,
-          "source": "Arena multi-image edit snapshot"
-        },
-        {
-          "family": "Google",
-          "name": "Gemini 3 Pro Image",
-          "date": "2025-12-16",
-          "score": 1388,
-          "rank": 3,
-          "winRate": 0.88,
-          "source": "Arena image-edit snapshot"
-        },
-        {
-          "family": "Google",
-          "name": "Gemini 3.1 Flash Image",
-          "date": "2026-03-18",
-          "score": 1264,
+          "id": "text-to-image:mai-image-2.6-preview",
+          "family": "Microsoft AI",
+          "name": "mai-image-2.6-preview",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1331,
           "rank": 2,
-          "winRate": 0.84,
-          "source": "Arena text-to-image snapshot"
+          "votes": 6418,
+          "ci": 8,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Google Nano Banana",
-          "name": "Nano Banana 1",
-          "date": "2025-08-26",
-          "score": 1271,
-          "rank": 6,
-          "winRate": 0.82,
-          "source": "Gemini 2.5 Flash Image / Nano Banana launch"
-        },
-        {
-          "family": "Google Nano Banana",
-          "name": "Nano Banana Pro",
-          "date": "2025-11-18",
-          "score": 1388,
+          "id": "text-to-image:grok-imagine-image-2.0-(low)",
+          "family": "xAI",
+          "name": "grok-imagine-image-2.0 (low)",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1316,
           "rank": 3,
-          "winRate": 0.88,
-          "source": "Gemini 3 Pro Image / Nano Banana Pro"
+          "votes": 2675,
+          "ci": 12,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Google Nano Banana",
-          "name": "Nano Banana 2",
-          "date": "2026-02-26",
-          "score": 1438,
-          "rank": 2,
-          "winRate": 0.89,
-          "source": "Google Nano Banana 2 announcement"
+          "id": "text-to-image:reve-2.1",
+          "family": "Reve",
+          "name": "reve-2.1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1302,
+          "rank": 4,
+          "votes": 7580,
+          "ci": 8,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Midjourney",
-          "name": "V4",
-          "date": "2022-11-05",
-          "score": 980,
-          "rank": 22,
-          "winRate": 0.54,
-          "source": "Midjourney public model generation"
+          "id": "text-to-image:muse-image",
+          "family": "Meta",
+          "name": "muse-image",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1281,
+          "rank": 5,
+          "votes": 22691,
+          "ci": 6,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Midjourney",
-          "name": "V5",
-          "date": "2023-03-15",
-          "score": 1058,
-          "rank": 16,
-          "winRate": 0.61,
-          "source": "Midjourney V5 generation"
+          "id": "text-to-image:reve-2.0",
+          "family": "Reve",
+          "name": "reve-2.0",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1270,
+          "rank": 6,
+          "votes": 14631,
+          "ci": 6,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Midjourney",
-          "name": "V6",
-          "date": "2023-12-21",
-          "score": 1138,
-          "rank": 9,
-          "winRate": 0.69,
-          "source": "Midjourney V6 generation"
+          "id": "text-to-image:gemini-3.1-flash-image-(nano-banana-2)-[web-search]",
+          "family": "Google",
+          "name": "gemini-3.1-flash-image (nano-banana-2) [web-search]",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1263,
+          "rank": 7,
+          "votes": 36392,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Midjourney",
-          "name": "V7",
-          "date": "2025-04-03",
-          "score": 1160,
-          "rank": 12,
-          "winRate": 0.72,
-          "source": "Midjourney V7 generation"
-        },
-        {
-          "family": "Black Forest Labs",
-          "name": "FLUX.1 dev",
-          "date": "2024-08-01",
-          "score": 970,
-          "rank": 48,
-          "winRate": 0.56,
-          "source": "Arena open-source snapshot"
-        },
-        {
-          "family": "Black Forest Labs",
-          "name": "FLUX.1 Kontext",
-          "date": "2025-05-29",
-          "score": 941,
-          "rank": 50,
-          "winRate": 0.55,
-          "source": "Arena open-source snapshot"
-        },
-        {
-          "family": "Black Forest Labs",
-          "name": "FLUX 2 max",
-          "date": "2025-11-25",
-          "score": 1167,
+          "id": "text-to-image:seedream-5.0-pro",
+          "family": "ByteDance",
+          "name": "seedream-5.0-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1258,
           "rank": 8,
-          "winRate": 0.76,
-          "source": "Arena text-to-image snapshot"
+          "votes": 48174,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Stability",
-          "name": "SDXL 1.0",
-          "date": "2023-07-26",
-          "score": 1010,
-          "rank": 20,
-          "winRate": 0.57,
-          "source": "Stability AI generation"
+          "id": "text-to-image:qwen-image-3.0-pro",
+          "family": "Qwen / Alibaba",
+          "name": "qwen-image-3.0-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1255,
+          "rank": 9,
+          "votes": 10927,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Stability",
-          "name": "Stable Diffusion 3",
-          "date": "2024-06-12",
-          "score": 1060,
+          "id": "text-to-image:mai-image-2.5",
+          "family": "Microsoft AI",
+          "name": "mai-image-2.5",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1254,
+          "rank": 10,
+          "votes": 56737,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:gemini-3.1-flash-lite-image-(nano-banana-2-lite)",
+          "family": "Google",
+          "name": "gemini-3.1-flash-lite-image (nano-banana-2-lite)",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1251,
+          "rank": 11,
+          "votes": 16381,
+          "ci": 6,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:gemini-3-pro-image-2k-(nano-banana-pro)",
+          "family": "Google",
+          "name": "gemini-3-pro-image-2k (nano-banana-pro)",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1245,
+          "rank": 12,
+          "votes": 146806,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:gpt-image-1.5-high-fidelity",
+          "family": "OpenAI",
+          "name": "gpt-image-1.5-high-fidelity",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1239,
+          "rank": 13,
+          "votes": 148079,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:gemini-3-pro-image-preview-(nano-banana-pro)",
+          "family": "Google",
+          "name": "gemini-3-pro-image-preview (nano-banana-pro)",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1232,
+          "rank": 14,
+          "votes": 82738,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:ideogram-4.0-quality",
+          "family": "Ideogram",
+          "name": "ideogram-4.0-quality",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1204,
+          "rank": 15,
+          "votes": 36647,
+          "ci": 5,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:qwen-image-2.0-pro-2026-06-22",
+          "family": "Qwen / Alibaba",
+          "name": "qwen-image-2.0-pro-2026-06-22",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1191,
+          "rank": 16,
+          "votes": 12013,
+          "ci": 6,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:uni-1.1-max",
+          "family": "Luma AI",
+          "name": "uni-1.1-max",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1188,
           "rank": 17,
-          "winRate": 0.61,
-          "source": "Stability AI generation"
+          "votes": 13468,
+          "ci": 6,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         },
         {
-          "family": "Stability",
-          "name": "Stable Diffusion 3.5 Large",
-          "date": "2024-10-22",
-          "score": 938,
+          "id": "text-to-image:uni-1.1",
+          "family": "Luma AI",
+          "name": "uni-1.1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1183,
+          "rank": 18,
+          "votes": 32214,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:mai-image-2",
+          "family": "Microsoft AI",
+          "name": "mai-image-2",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1183,
+          "rank": 19,
+          "votes": 49180,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:cosmos3-super-text2image-(agentic)",
+          "family": "Nvidia",
+          "name": "Cosmos3-Super-Text2Image (Agentic)",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1172,
+          "rank": 20,
+          "votes": 4598,
+          "ci": 9,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:grok-imagine-image",
+          "family": "xAI",
+          "name": "grok-imagine-image",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1171,
+          "rank": 21,
+          "votes": 229148,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:recraft-v4.1-utility-pro",
+          "family": "Recraft",
+          "name": "recraft-v4.1-utility-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1169,
+          "rank": 22,
+          "votes": 2519,
+          "ci": 11,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-2-max",
+          "family": "Black Forest Labs",
+          "name": "flux-2-max",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1162,
+          "rank": 23,
+          "votes": 117324,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:grok-imagine-image-pro",
+          "family": "xAI",
+          "name": "grok-imagine-image-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1161,
+          "rank": 24,
+          "votes": 93631,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-2-flex",
+          "family": "Black Forest Labs",
+          "name": "flux-2-flex",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1157,
+          "rank": 25,
+          "votes": 149295,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:cosmos3-super-text2image",
+          "family": "Nvidia",
+          "name": "Cosmos3-Super-Text2Image",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1156,
+          "rank": 26,
+          "votes": 7625,
+          "ci": 7,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-2-pro",
+          "family": "Black Forest Labs",
+          "name": "flux-2-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1155,
+          "rank": 27,
+          "votes": 183024,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:reve-v1.5",
+          "family": "Reve",
+          "name": "reve-v1.5",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1154,
+          "rank": 28,
+          "votes": 36762,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:hunyuan-image-3.0",
+          "family": "Tencent",
+          "name": "hunyuan-image-3.0",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1151,
+          "rank": 29,
+          "votes": 173101,
+          "ci": 3,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:gemini-2.5-flash-image-preview-(nano-banana)",
+          "family": "Google",
+          "name": "gemini-2.5-flash-image-preview (nano-banana)",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1150,
+          "rank": 30,
+          "votes": 836062,
+          "ci": 2,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:imagen-ultra-4.0-generate-001",
+          "family": "Google",
+          "name": "imagen-ultra-4.0-generate-001",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1148,
+          "rank": 31,
+          "votes": 388103,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:seedream-4.5",
+          "family": "ByteDance",
+          "name": "seedream-4.5",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1147,
+          "rank": 32,
+          "votes": 249780,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-2-dev",
+          "family": "Black Forest Labs",
+          "name": "flux-2-dev",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1146,
+          "rank": 33,
+          "votes": 73988,
+          "ci": 4,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:seedream-4-2k",
+          "family": "ByteDance",
+          "name": "seedream-4-2k",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1140,
+          "rank": 34,
+          "votes": 12618,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:seedream-5.0-lite",
+          "family": "ByteDance",
+          "name": "seedream-5.0-lite",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1138,
+          "rank": 35,
+          "votes": 104031,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:wan2.6-t2i",
+          "family": "Qwen / Alibaba",
+          "name": "wan2.6-t2i",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1136,
+          "rank": 36,
+          "votes": 193831,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:recraft-v4.1-pro",
+          "family": "Recraft",
+          "name": "recraft-v4.1-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1130,
+          "rank": 37,
+          "votes": 2683,
+          "ci": 11,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:imagen-4.0-generate-001",
+          "family": "Google",
+          "name": "imagen-4.0-generate-001",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1129,
+          "rank": 38,
+          "votes": 531812,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:qwen-image-2512",
+          "family": "Qwen / Alibaba",
+          "name": "qwen-image-2512",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1125,
+          "rank": 39,
+          "votes": 92532,
+          "ci": 4,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:krea-2-medium",
+          "family": "Krea",
+          "name": "krea-2-medium",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1123,
+          "rank": 40,
+          "votes": 34885,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:hidream-o1-image",
+          "family": "HiDream",
+          "name": "hidream-o1-image",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1118,
+          "rank": 41,
+          "votes": 42870,
+          "ci": 4,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:wan2.5-t2i-preview",
+          "family": "Qwen / Alibaba",
+          "name": "wan2.5-t2i-preview",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1117,
+          "rank": 42,
+          "votes": 241260,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:seedream-4-fal",
+          "family": "ByteDance",
+          "name": "seedream-4-fal",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1116,
+          "rank": 43,
+          "votes": 11869,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:gpt-image-1",
+          "family": "OpenAI",
+          "name": "gpt-image-1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1115,
+          "rank": 44,
+          "votes": 264895,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:recraft-v4",
+          "family": "Recraft",
+          "name": "recraft-v4",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1113,
+          "rank": 45,
+          "votes": 108600,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:seedream-4-high-res-fal",
+          "family": "ByteDance",
+          "name": "seedream-4-high-res-fal",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1113,
+          "rank": 46,
+          "votes": 175350,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:krea-2-turbo",
+          "family": "Krea",
+          "name": "krea-2-turbo",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1110,
+          "rank": 47,
+          "votes": 27624,
+          "ci": 5,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:gpt-image-1-mini",
+          "family": "OpenAI",
+          "name": "gpt-image-1-mini",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1109,
+          "rank": 48,
+          "votes": 163833,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:krea-2-large",
+          "family": "Krea",
+          "name": "krea-2-large",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1108,
+          "rank": 49,
+          "votes": 34449,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:wan2.7-image-pro",
+          "family": "Qwen / Alibaba",
+          "name": "wan2.7-image-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1103,
+          "rank": 50,
+          "votes": 28732,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:wan2.7-image",
+          "family": "Qwen / Alibaba",
+          "name": "wan2.7-image",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1100,
+          "rank": 51,
+          "votes": 29091,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:mai-image-1",
+          "family": "Microsoft AI",
+          "name": "mai-image-1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1093,
           "rank": 52,
-          "winRate": 0.52,
-          "source": "Arena open-source snapshot"
+          "votes": 94562,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:z-image-turbo",
+          "family": "Qwen / Alibaba",
+          "name": "z-image-turbo",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1084,
+          "rank": 53,
+          "votes": 21732,
+          "ci": 6,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:seedream-3",
+          "family": "ByteDance",
+          "name": "seedream-3",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1082,
+          "rank": 54,
+          "votes": 36921,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-1-kontext-max",
+          "family": "Black Forest Labs",
+          "name": "flux-1-kontext-max",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1074,
+          "rank": 55,
+          "votes": 65618,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-2-klein-9b",
+          "family": "Black Forest Labs",
+          "name": "flux-2-klein-9b",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1070,
+          "rank": 56,
+          "votes": 142623,
+          "ci": 3,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:qwen-image-prompt-extend",
+          "family": "Qwen / Alibaba",
+          "name": "qwen-image-prompt-extend",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1061,
+          "rank": 57,
+          "votes": 705198,
+          "ci": 3,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-1-kontext-pro",
+          "family": "Black Forest Labs",
+          "name": "flux-1-kontext-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1059,
+          "rank": 58,
+          "votes": 330858,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:imagen-3.0-generate-002",
+          "family": "Google",
+          "name": "imagen-3.0-generate-002",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1058,
+          "rank": 59,
+          "votes": 360161,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:qwen-image",
+          "family": "Qwen / Alibaba",
+          "name": "qwen-image",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1057,
+          "rank": 60,
+          "votes": 84717,
+          "ci": 3,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:ideogram-v3-quality",
+          "family": "Ideogram",
+          "name": "ideogram-v3-quality",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1049,
+          "rank": 61,
+          "votes": 115410,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:photon",
+          "family": "Luma AI",
+          "name": "photon",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1035,
+          "rank": 62,
+          "votes": 127522,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:p-image",
+          "family": "Unknown",
+          "name": "p-image",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1034,
+          "rank": 63,
+          "votes": 103847,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-2-klein-4b",
+          "family": "Black Forest Labs",
+          "name": "flux-2-klein-4b",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1030,
+          "rank": 64,
+          "votes": 144483,
+          "ci": 3,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:runway-gen4",
+          "family": "Runway",
+          "name": "runway-gen4",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1025,
+          "rank": 65,
+          "votes": 51751,
+          "ci": 5,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:recraft-v3",
+          "family": "Recraft",
+          "name": "recraft-v3",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1021,
+          "rank": 66,
+          "votes": 191829,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-1.1-pro",
+          "family": "Black Forest Labs",
+          "name": "flux-1.1-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1016,
+          "rank": 67,
+          "votes": 70460,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:lucid-origin",
+          "family": "Leonardo AI",
+          "name": "lucid-origin",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1013,
+          "rank": 68,
+          "votes": 285047,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:ideogram-v2",
+          "family": "Ideogram",
+          "name": "ideogram-v2",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1013,
+          "rank": 69,
+          "votes": 72090,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:glm-image",
+          "family": "Z.ai",
+          "name": "glm-image",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1010,
+          "rank": 70,
+          "votes": 4623,
+          "ci": 9,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:gemini-2.0-flash-preview-image-generation",
+          "family": "Google",
+          "name": "gemini-2.0-flash-preview-image-generation",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 975,
+          "rank": 71,
+          "votes": 257096,
+          "ci": 3,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-1-dev-fp8",
+          "family": "Black Forest Labs",
+          "name": "flux-1-dev-fp8",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 969,
+          "rank": 72,
+          "votes": 49221,
+          "ci": 4,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:dall-e-3",
+          "family": "OpenAI",
+          "name": "dall-e-3",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 968,
+          "rank": 73,
+          "votes": 239066,
+          "ci": 4,
+          "license": "proprietary",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:flux-1-kontext-dev",
+          "family": "Black Forest Labs",
+          "name": "flux-1-kontext-dev",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 940,
+          "rank": 74,
+          "votes": 215339,
+          "ci": 4,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:stable-diffusion-v35-large",
+          "family": "Stability AI",
+          "name": "stable-diffusion-v35-large",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 938,
+          "rank": 75,
+          "votes": 23396,
+          "ci": 5,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
+        },
+        {
+          "id": "text-to-image:bagel",
+          "family": "ByteDance",
+          "name": "bagel",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 898,
+          "rank": 76,
+          "votes": 12375,
+          "ci": 6,
+          "license": "open",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image"
         }
       ]
     },
     "video": {
       "label": "VIDEO",
-      "unit": "Video Arena Elo",
-      "note": "Artificial Analysis Text-to-Video 与 Arena Video Edit 快照",
+      "unit": "Video Arena score",
+      "note": "https://arena.ai/leaderboard/text-to-video · fetched 2026-08-26T02:50:08.801755+00:00",
+      "leaderboard": "text-to-video",
+      "sourceUrl": "https://arena.ai/leaderboard/text-to-video",
+      "sourceFetchedAt": "2026-08-26T02:50:08.801755+00:00",
+      "sourceLastUpdated": "Aug 14, 2026",
+      "currentCount": 45,
       "models": [
         {
-          "family": "Runway",
-          "name": "Gen-2",
-          "date": "2023-03-20",
-          "score": 970,
-          "rank": 20,
-          "winRate": 0.52,
-          "source": "Runway Gen-2 era"
-        },
-        {
-          "family": "Runway",
-          "name": "Gen-3 Alpha",
-          "date": "2024-06-17",
-          "score": 1110,
-          "rank": 12,
-          "winRate": 0.66,
-          "source": "Runway Gen-3 generation"
-        },
-        {
-          "family": "Runway",
-          "name": "Gen-4",
-          "date": "2025-03-31",
-          "score": 1208,
-          "rank": 5,
-          "winRate": 0.77,
-          "source": "Arena video-edit snapshot"
-        },
-        {
-          "family": "Runway",
-          "name": "Gen-4.5",
-          "date": "2025-12-01",
-          "score": 1247,
-          "rank": 4,
-          "winRate": 0.8,
-          "source": "Artificial Analysis video snapshot"
-        },
-        {
+          "id": "text-to-video:gemini-omni-flash",
           "family": "Google",
-          "name": "Veo",
-          "date": "2024-05-14",
-          "score": 1090,
-          "rank": 14,
-          "winRate": 0.64,
-          "source": "Google Veo launch era"
+          "name": "gemini-omni-flash",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1512,
+          "rank": 1,
+          "votes": 16916,
+          "ci": 11,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
         },
         {
-          "family": "Google",
-          "name": "Veo 2",
-          "date": "2024-12-16",
-          "score": 1175,
-          "rank": 9,
-          "winRate": 0.73,
-          "source": "Veo 2 launch era"
-        },
-        {
-          "family": "Google",
-          "name": "Veo 3",
-          "date": "2025-05-20",
-          "score": 1226,
-          "rank": 6,
-          "winRate": 0.79,
-          "source": "Artificial Analysis video snapshot"
-        },
-        {
-          "family": "Google",
-          "name": "Veo 3.1",
-          "date": "2025-10-15",
-          "score": 1238,
-          "rank": 5,
-          "winRate": 0.8,
-          "source": "Artificial Analysis video snapshot"
-        },
-        {
-          "family": "OpenAI",
-          "name": "Sora",
-          "date": "2024-02-15",
-          "score": 1085,
-          "rank": 15,
-          "winRate": 0.63,
-          "source": "OpenAI Sora preview era"
-        },
-        {
-          "family": "OpenAI",
-          "name": "Sora public",
-          "date": "2024-12-09",
-          "score": 1168,
-          "rank": 10,
-          "winRate": 0.72,
-          "source": "Sora public release era"
-        },
-        {
-          "family": "OpenAI",
-          "name": "Sora 2 Pro",
-          "date": "2025-09-30",
-          "score": 1206,
-          "rank": 7,
-          "winRate": 0.76,
-          "source": "Artificial Analysis video snapshot"
-        },
-        {
-          "family": "KlingAI",
-          "name": "Kling 1.0",
-          "date": "2024-06-06",
-          "score": 1060,
-          "rank": 16,
-          "winRate": 0.61,
-          "source": "Kling launch era"
-        },
-        {
-          "family": "KlingAI",
-          "name": "Kling 1.5",
-          "date": "2024-09-19",
-          "score": 1135,
-          "rank": 11,
-          "winRate": 0.68,
-          "source": "Kling generation"
-        },
-        {
-          "family": "KlingAI",
-          "name": "Kling 2.1",
-          "date": "2025-06-10",
-          "score": 1195,
-          "rank": 8,
-          "winRate": 0.75,
-          "source": "Kling generation"
-        },
-        {
-          "family": "KlingAI",
-          "name": "Kling 3.0 Pro",
-          "date": "2026-02-01",
-          "score": 1246,
-          "rank": 3,
-          "winRate": 0.81,
-          "source": "Artificial Analysis video snapshot"
-        },
-        {
-          "family": "ByteDance",
-          "name": "Seedance 1.0",
-          "date": "2025-06-11",
-          "score": 1210,
-          "rank": 7,
-          "winRate": 0.77,
-          "source": "Seedance generation"
-        },
-        {
-          "family": "ByteDance",
-          "name": "Seedance 2.0",
-          "date": "2026-03-01",
-          "score": 1268,
+          "id": "text-to-video:flux-3-video",
+          "family": "Black Forest Labs",
+          "name": "flux-3-video",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1494,
           "rank": 2,
-          "winRate": 0.84,
-          "source": "Artificial Analysis video snapshot"
+          "votes": 1291,
+          "ci": 17,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
         },
         {
-          "family": "Wan",
-          "name": "Wan 2.1",
-          "date": "2025-02-25",
-          "score": 1128,
-          "rank": 13,
-          "winRate": 0.67,
-          "source": "Wan open-source video generation"
+          "id": "text-to-video:dreamina-seedance-2.0-720p",
+          "family": "ByteDance",
+          "name": "dreamina-seedance-2.0-720p",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1482,
+          "rank": 3,
+          "votes": 49058,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
         },
         {
-          "family": "Wan",
-          "name": "Wan 2.2",
-          "date": "2025-07-28",
-          "score": 1182,
-          "rank": 9,
-          "winRate": 0.73,
-          "source": "Wan open-source video generation"
+          "id": "text-to-video:dreamina-seedance-2.5-720p",
+          "family": "ByteDance",
+          "name": "dreamina-seedance-2.5-720p",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1477,
+          "rank": 4,
+          "votes": 1337,
+          "ci": 19,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
         },
         {
-          "family": "Wan",
-          "name": "Wan 3.0",
-          "date": "2026-01-18",
-          "score": 1232,
+          "id": "text-to-video:muse-video",
+          "family": "Meta",
+          "name": "muse-video",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1457,
+          "rank": 5,
+          "votes": 2176,
+          "ci": 15,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:minimax-h3",
+          "family": "MiniMax",
+          "name": "minimax-h3",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1453,
           "rank": 6,
-          "winRate": 0.79,
-          "source": "Daily snapshot candidate"
+          "votes": 3081,
+          "ci": 13,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
         },
         {
-          "family": "Pika Labs",
-          "name": "Pika 1.0",
-          "date": "2023-11-28",
-          "score": 990,
-          "rank": 21,
-          "winRate": 0.54,
-          "source": "Pika public generation"
-        },
-        {
-          "family": "Pika Labs",
-          "name": "Pika 1.5",
-          "date": "2024-10-01",
-          "score": 1118,
-          "rank": 14,
-          "winRate": 0.66,
-          "source": "Pika 1.5 generation"
-        },
-        {
-          "family": "Pika Labs",
-          "name": "Pika 2.0",
-          "date": "2024-12-13",
-          "score": 1158,
-          "rank": 11,
-          "winRate": 0.7,
-          "source": "Pika 2.0 generation"
-        },
-        {
-          "family": "Pika Labs",
-          "name": "Pika 2.2",
-          "date": "2025-05-13",
-          "score": 1190,
-          "rank": 8,
-          "winRate": 0.74,
-          "source": "Pika 2.2 generation"
-        },
-        {
-          "family": "Pika Labs",
-          "name": "Pika 2.5",
-          "date": "2026-04-07",
-          "score": 1202,
+          "id": "text-to-video:happyhorse-1.0",
+          "family": "Alibaba-ATH",
+          "name": "happyhorse-1.0",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1428,
           "rank": 7,
-          "winRate": 0.75,
-          "source": "Auto-discovered from artificialanalysis.ai"
+          "votes": 22113,
+          "ci": 13,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:sora-2-pro",
+          "family": "OpenAI",
+          "name": "sora-2-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1364,
+          "rank": 8,
+          "votes": 46509,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-3.1-audio",
+          "family": "Google",
+          "name": "veo-3.1-audio",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1364,
+          "rank": 9,
+          "votes": 13743,
+          "ci": 14,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-3.1-audio-1080p",
+          "family": "Google",
+          "name": "veo-3.1-audio-1080p",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1363,
+          "rank": 10,
+          "votes": 24979,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-3.1-fast-audio",
+          "family": "Google",
+          "name": "veo-3.1-fast-audio",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1361,
+          "rank": 11,
+          "votes": 39441,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-3.1-fast-audio-1080p",
+          "family": "Google",
+          "name": "veo-3.1-fast-audio-1080p",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1358,
+          "rank": 12,
+          "votes": 25771,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-3-fast-audio",
+          "family": "Google",
+          "name": "veo-3-fast-audio",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1347,
+          "rank": 13,
+          "votes": 25219,
+          "ci": 11,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:grok-imagine-video-720p",
+          "family": "xAI",
+          "name": "grok-imagine-video-720p",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1345,
+          "rank": 14,
+          "votes": 154827,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:wan2.7-t2v",
+          "family": "Qwen / Alibaba",
+          "name": "wan2.7-t2v",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1344,
+          "rank": 15,
+          "votes": 17769,
+          "ci": 9,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:sora-2",
+          "family": "OpenAI",
+          "name": "sora-2",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1340,
+          "rank": 16,
+          "votes": 62692,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-3-audio",
+          "family": "Google",
+          "name": "veo-3-audio",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1339,
+          "rank": 17,
+          "votes": 19007,
+          "ci": 13,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:wan2.6-t2v",
+          "family": "Qwen / Alibaba",
+          "name": "wan2.6-t2v",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1330,
+          "rank": 18,
+          "votes": 44304,
+          "ci": 8,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:seedance-v1.5-pro",
+          "family": "ByteDance",
+          "name": "seedance-v1.5-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1256,
+          "rank": 19,
+          "votes": 75990,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-3",
+          "family": "Google",
+          "name": "veo-3",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1253,
+          "rank": 20,
+          "votes": 14986,
+          "ci": 11,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:wan2.5-t2v-preview",
+          "family": "Qwen / Alibaba",
+          "name": "wan2.5-t2v-preview",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1249,
+          "rank": 21,
+          "votes": 28239,
+          "ci": 9,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-3-fast",
+          "family": "Google",
+          "name": "veo-3-fast",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1248,
+          "rank": 22,
+          "votes": 15271,
+          "ci": 12,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:pixverse-v5.6",
+          "family": "Unknown",
+          "name": "pixverse-v5.6",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1240,
+          "rank": 23,
+          "votes": 32301,
+          "ci": 11,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:runway-gen-4.5",
+          "family": "Runway",
+          "name": "runway-gen-4.5",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1223,
+          "rank": 24,
+          "votes": 38795,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:kling-2.5-turbo-1080p",
+          "family": "KlingAI",
+          "name": "kling-2.5-turbo-1080p",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1219,
+          "rank": 25,
+          "votes": 2105,
+          "ci": 17,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:kling-2.6-pro",
+          "family": "KlingAI",
+          "name": "kling-2.6-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1217,
+          "rank": 26,
+          "votes": 73164,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:p-video",
+          "family": "Unknown",
+          "name": "p-video",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1207,
+          "rank": 27,
+          "votes": 7050,
+          "ci": 16,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:kling-o1-pro",
+          "family": "KlingAI",
+          "name": "kling-o1-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1205,
+          "rank": 28,
+          "votes": 1195,
+          "ci": 27,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:ray-3",
+          "family": "Luma AI",
+          "name": "ray-3",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1205,
+          "rank": 29,
+          "votes": 1131,
+          "ci": 22,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:hailuo-2.3",
+          "family": "MiniMax",
+          "name": "hailuo-2.3",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1204,
+          "rank": 30,
+          "votes": 75780,
+          "ci": 7,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:hailuo-02-pro",
+          "family": "MiniMax",
+          "name": "hailuo-02-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1198,
+          "rank": 31,
+          "votes": 9392,
+          "ci": 12,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:seedance-v1-pro",
+          "family": "ByteDance",
+          "name": "seedance-v1-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1190,
+          "rank": 32,
+          "votes": 12146,
+          "ci": 11,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:hailuo-02-standard",
+          "family": "MiniMax",
+          "name": "hailuo-02-standard",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1180,
+          "rank": 33,
+          "votes": 9355,
+          "ci": 12,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:kandinsky-5.0-t2v-pro",
+          "family": "Kandinsky",
+          "name": "kandinsky-5.0-t2v-pro",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1172,
+          "rank": 34,
+          "votes": 2024,
+          "ci": 20,
+          "license": "open",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:hunyuan-video-1.5",
+          "family": "Tencent",
+          "name": "hunyuan-video-1.5",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1169,
+          "rank": 35,
+          "votes": 4290,
+          "ci": 16,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:veo-2",
+          "family": "Google",
+          "name": "veo-2",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1163,
+          "rank": 36,
+          "votes": 6525,
+          "ci": 16,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:kling-v2.1-master",
+          "family": "KlingAI",
+          "name": "kling-v2.1-master",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1162,
+          "rank": 37,
+          "votes": 14083,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:ltx-2-19b",
+          "family": "Unknown",
+          "name": "ltx-2-19b",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1151,
+          "rank": 38,
+          "votes": 64706,
+          "ci": 8,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:wan-v2.2-a14b",
+          "family": "Qwen / Alibaba",
+          "name": "wan-v2.2-a14b",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1131,
+          "rank": 39,
+          "votes": 10442,
+          "ci": 15,
+          "license": "open",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:kandinsky-5.0-t2v-lite",
+          "family": "Kandinsky",
+          "name": "kandinsky-5.0-t2v-lite",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1113,
+          "rank": 40,
+          "votes": 1480,
+          "ci": 18,
+          "license": "open",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:seedance-v1-lite",
+          "family": "ByteDance",
+          "name": "seedance-v1-lite",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1112,
+          "rank": 41,
+          "votes": 16243,
+          "ci": 10,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:sora",
+          "family": "OpenAI",
+          "name": "sora",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1068,
+          "rank": 42,
+          "votes": 4085,
+          "ci": 16,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:ray2",
+          "family": "Luma AI",
+          "name": "ray2",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1064,
+          "rank": 43,
+          "votes": 5234,
+          "ci": 17,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:pika-v2.2",
+          "family": "Pika Labs",
+          "name": "pika-v2.2",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1008,
+          "rank": 44,
+          "votes": 5746,
+          "ci": 15,
+          "license": "proprietary",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
+        },
+        {
+          "id": "text-to-video:mochi-v1",
+          "family": "Genmo AI",
+          "name": "mochi-v1",
+          "date": "2026-08-26",
+          "firstSeen": "2026-08-26",
+          "lastSeen": "2026-08-26",
+          "active": true,
+          "score": 1005,
+          "rank": 45,
+          "votes": 5871,
+          "ci": 17,
+          "license": "open",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video"
         }
       ]
     }
   },
   "updateHistory": [
     {
-      "date": "2026-08-26T19:58:26.954Z",
-      "additions": 0,
-      "sources": [
+      "date": "2026-08-27T01:36:06.995Z",
+      "dataAsOf": "2026-08-26",
+      "additions": 171,
+      "newModels": [
         {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
+          "section": "chat",
+          "model": "claude-fable-5",
+          "vendor": "Anthropic"
         },
         {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
+          "section": "chat",
+          "model": "claude-opus-4-6-high",
+          "vendor": "Anthropic"
         },
         {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
+          "section": "chat",
+          "model": "claude-opus-4-7-high",
+          "vendor": "Anthropic"
         },
         {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
+          "section": "chat",
+          "model": "muse-spark-1.2 (xHigh)",
+          "vendor": "Meta"
         },
         {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
+          "section": "chat",
+          "model": "claude-opus-4-6",
+          "vendor": "Anthropic"
         },
         {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
+          "section": "chat",
+          "model": "claude-opus-4-7",
+          "vendor": "Anthropic"
         },
         {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
+          "section": "chat",
+          "model": "claude-opus-5-high",
+          "vendor": "Anthropic"
+        },
+        {
+          "section": "chat",
+          "model": "muse-spark-1.1",
+          "vendor": "Meta"
+        },
+        {
+          "section": "chat",
+          "model": "gemini-3.7-flash-high",
+          "vendor": "Google"
+        },
+        {
+          "section": "chat",
+          "model": "kimi-k3-max",
+          "vendor": "Moonshot"
+        },
+        {
+          "section": "chat",
+          "model": "muse-spark",
+          "vendor": "Meta"
+        },
+        {
+          "section": "chat",
+          "model": "claude-opus-5-max",
+          "vendor": "Anthropic"
+        },
+        {
+          "section": "chat",
+          "model": "glm-5.3-max",
+          "vendor": "Z.ai"
+        },
+        {
+          "section": "chat",
+          "model": "gemini-3.1-pro-preview",
+          "vendor": "Google"
+        },
+        {
+          "section": "chat",
+          "model": "gemini-3-pro",
+          "vendor": "Google"
+        },
+        {
+          "section": "chat",
+          "model": "gpt-5.6-sol-xhigh",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "chat",
+          "model": "gpt-5.5-high",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "chat",
+          "model": "claude-opus-4-8-high",
+          "vendor": "Anthropic"
+        },
+        {
+          "section": "chat",
+          "model": "qwen3.8-max",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "chat",
+          "model": "gemini-3.6-flash-high",
+          "vendor": "Google"
+        },
+        {
+          "section": "chat",
+          "model": "gemini-3.5-flash-high",
+          "vendor": "Google"
+        },
+        {
+          "section": "chat",
+          "model": "gpt-5.4-high",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "chat",
+          "model": "gpt-5.5",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "chat",
+          "model": "gpt-5.2-chat-latest-20260210",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "chat",
+          "model": "grok-4.20-beta1",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "chat",
+          "model": "gemini-3.5-flash-medium",
+          "vendor": "Google"
+        },
+        {
+          "section": "chat",
+          "model": "qwen3.7-max-preview",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "chat",
+          "model": "gpt-5.5-instant",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "chat",
+          "model": "claude-opus-4-8",
+          "vendor": "Anthropic"
+        },
+        {
+          "section": "chat",
+          "model": "gemini-3-flash",
+          "vendor": "Google"
+        },
+        {
+          "section": "chat",
+          "model": "claude-opus-4-5-20251101-high-32k",
+          "vendor": "Anthropic"
+        },
+        {
+          "section": "chat",
+          "model": "claude-sonnet-4-6",
+          "vendor": "Anthropic"
+        },
+        {
+          "section": "chat",
+          "model": "grok-4.20-beta-0309-reasoning",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "chat",
+          "model": "glm-5.2-max",
+          "vendor": "Z.ai"
+        },
+        {
+          "section": "chat",
+          "model": "grok-4.5",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "chat",
+          "model": "grok-4.20-multi-agent-beta-0309",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "chat",
+          "model": "claude-opus-4-5-20251101",
+          "vendor": "Anthropic"
+        },
+        {
+          "section": "chat",
+          "model": "ernie-5.1",
+          "vendor": "Baidu"
+        },
+        {
+          "section": "chat",
+          "model": "glm-5.1",
+          "vendor": "Z.ai"
+        },
+        {
+          "section": "chat",
+          "model": "mimo-v2.5-pro",
+          "vendor": "Xiaomi"
+        },
+        {
+          "section": "chat",
+          "model": "gpt-5.4",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "chat",
+          "model": "grok-4.1-thinking",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "chat",
+          "model": "qwen3.5-max-preview",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "chat",
+          "model": "gpt-5.6-terra-xhigh",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "chat",
+          "model": "claude-sonnet-5-high",
+          "vendor": "Anthropic"
+        },
+        {
+          "section": "chat",
+          "model": "grok-4.6-high",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "chat",
+          "model": "kimi-k2.6",
+          "vendor": "Moonshot"
+        },
+        {
+          "section": "chat",
+          "model": "qwen3.6-max-preview",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "chat",
+          "model": "grok-4.1",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "chat",
+          "model": "deepseek-v4-pro-high-20260813",
+          "vendor": "DeepSeek"
+        },
+        {
+          "section": "image",
+          "model": "gpt-image-2 (medium)",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "image",
+          "model": "mai-image-2.6-preview",
+          "vendor": "Microsoft AI"
+        },
+        {
+          "section": "image",
+          "model": "grok-imagine-image-2.0 (low)",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "image",
+          "model": "reve-2.1",
+          "vendor": "Reve"
+        },
+        {
+          "section": "image",
+          "model": "muse-image",
+          "vendor": "Meta"
+        },
+        {
+          "section": "image",
+          "model": "reve-2.0",
+          "vendor": "Reve"
+        },
+        {
+          "section": "image",
+          "model": "gemini-3.1-flash-image (nano-banana-2) [web-search]",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "seedream-5.0-pro",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "image",
+          "model": "qwen-image-3.0-pro",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "mai-image-2.5",
+          "vendor": "Microsoft AI"
+        },
+        {
+          "section": "image",
+          "model": "gemini-3.1-flash-lite-image (nano-banana-2-lite)",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "gemini-3-pro-image-2k (nano-banana-pro)",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "gpt-image-1.5-high-fidelity",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "image",
+          "model": "gemini-3-pro-image-preview (nano-banana-pro)",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "ideogram-4.0-quality",
+          "vendor": "Ideogram"
+        },
+        {
+          "section": "image",
+          "model": "qwen-image-2.0-pro-2026-06-22",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "uni-1.1-max",
+          "vendor": "Luma AI"
+        },
+        {
+          "section": "image",
+          "model": "uni-1.1",
+          "vendor": "Luma AI"
+        },
+        {
+          "section": "image",
+          "model": "mai-image-2",
+          "vendor": "Microsoft AI"
+        },
+        {
+          "section": "image",
+          "model": "Cosmos3-Super-Text2Image (Agentic)",
+          "vendor": "Nvidia"
+        },
+        {
+          "section": "image",
+          "model": "grok-imagine-image",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "image",
+          "model": "recraft-v4.1-utility-pro",
+          "vendor": "Recraft"
+        },
+        {
+          "section": "image",
+          "model": "flux-2-max",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "grok-imagine-image-pro",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "image",
+          "model": "flux-2-flex",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "Cosmos3-Super-Text2Image",
+          "vendor": "Nvidia"
+        },
+        {
+          "section": "image",
+          "model": "flux-2-pro",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "reve-v1.5",
+          "vendor": "Reve"
+        },
+        {
+          "section": "image",
+          "model": "hunyuan-image-3.0",
+          "vendor": "Tencent"
+        },
+        {
+          "section": "image",
+          "model": "gemini-2.5-flash-image-preview (nano-banana)",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "imagen-ultra-4.0-generate-001",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "seedream-4.5",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "image",
+          "model": "flux-2-dev",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "seedream-4-2k",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "image",
+          "model": "seedream-5.0-lite",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "image",
+          "model": "wan2.6-t2i",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "recraft-v4.1-pro",
+          "vendor": "Recraft"
+        },
+        {
+          "section": "image",
+          "model": "imagen-4.0-generate-001",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "qwen-image-2512",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "krea-2-medium",
+          "vendor": "Krea"
+        },
+        {
+          "section": "image",
+          "model": "hidream-o1-image",
+          "vendor": "HiDream"
+        },
+        {
+          "section": "image",
+          "model": "wan2.5-t2i-preview",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "seedream-4-fal",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "image",
+          "model": "gpt-image-1",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "image",
+          "model": "recraft-v4",
+          "vendor": "Recraft"
+        },
+        {
+          "section": "image",
+          "model": "seedream-4-high-res-fal",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "image",
+          "model": "krea-2-turbo",
+          "vendor": "Krea"
+        },
+        {
+          "section": "image",
+          "model": "gpt-image-1-mini",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "image",
+          "model": "krea-2-large",
+          "vendor": "Krea"
+        },
+        {
+          "section": "image",
+          "model": "wan2.7-image-pro",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "wan2.7-image",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "mai-image-1",
+          "vendor": "Microsoft AI"
+        },
+        {
+          "section": "image",
+          "model": "z-image-turbo",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "seedream-3",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "image",
+          "model": "flux-1-kontext-max",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "flux-2-klein-9b",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "qwen-image-prompt-extend",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "flux-1-kontext-pro",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "imagen-3.0-generate-002",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "qwen-image",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "image",
+          "model": "ideogram-v3-quality",
+          "vendor": "Ideogram"
+        },
+        {
+          "section": "image",
+          "model": "photon",
+          "vendor": "Luma AI"
+        },
+        {
+          "section": "image",
+          "model": "p-image",
+          "vendor": "Unknown"
+        },
+        {
+          "section": "image",
+          "model": "flux-2-klein-4b",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "runway-gen4",
+          "vendor": "Runway"
+        },
+        {
+          "section": "image",
+          "model": "recraft-v3",
+          "vendor": "Recraft"
+        },
+        {
+          "section": "image",
+          "model": "flux-1.1-pro",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "lucid-origin",
+          "vendor": "Leonardo AI"
+        },
+        {
+          "section": "image",
+          "model": "ideogram-v2",
+          "vendor": "Ideogram"
+        },
+        {
+          "section": "image",
+          "model": "glm-image",
+          "vendor": "Z.ai"
+        },
+        {
+          "section": "image",
+          "model": "gemini-2.0-flash-preview-image-generation",
+          "vendor": "Google"
+        },
+        {
+          "section": "image",
+          "model": "flux-1-dev-fp8",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "dall-e-3",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "image",
+          "model": "flux-1-kontext-dev",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "image",
+          "model": "stable-diffusion-v35-large",
+          "vendor": "Unknown"
+        },
+        {
+          "section": "image",
+          "model": "bagel",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "video",
+          "model": "gemini-omni-flash",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "flux-3-video",
+          "vendor": "Black Forest Labs"
+        },
+        {
+          "section": "video",
+          "model": "dreamina-seedance-2.0-720p",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "video",
+          "model": "dreamina-seedance-2.5-720p",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "video",
+          "model": "muse-video",
+          "vendor": "Meta"
+        },
+        {
+          "section": "video",
+          "model": "minimax-h3",
+          "vendor": "MiniMax"
+        },
+        {
+          "section": "video",
+          "model": "happyhorse-1.0",
+          "vendor": "Alibaba-ATH"
+        },
+        {
+          "section": "video",
+          "model": "sora-2-pro",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "video",
+          "model": "veo-3.1-audio",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "veo-3.1-audio-1080p",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "veo-3.1-fast-audio",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "veo-3.1-fast-audio-1080p",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "veo-3-fast-audio",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "grok-imagine-video-720p",
+          "vendor": "SpaceXAI"
+        },
+        {
+          "section": "video",
+          "model": "wan2.7-t2v",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "video",
+          "model": "sora-2",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "video",
+          "model": "veo-3-audio",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "wan2.6-t2v",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "video",
+          "model": "seedance-v1.5-pro",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "video",
+          "model": "veo-3",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "wan2.5-t2v-preview",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "video",
+          "model": "veo-3-fast",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "pixverse-v5.6",
+          "vendor": "Unknown"
+        },
+        {
+          "section": "video",
+          "model": "runway-gen-4.5",
+          "vendor": "Runway"
+        },
+        {
+          "section": "video",
+          "model": "kling-2.5-turbo-1080p",
+          "vendor": "KlingAI"
+        },
+        {
+          "section": "video",
+          "model": "kling-2.6-pro",
+          "vendor": "KlingAI"
+        },
+        {
+          "section": "video",
+          "model": "p-video",
+          "vendor": "Unknown"
+        },
+        {
+          "section": "video",
+          "model": "kling-o1-pro",
+          "vendor": "KlingAI"
+        },
+        {
+          "section": "video",
+          "model": "ray-3",
+          "vendor": "Luma AI"
+        },
+        {
+          "section": "video",
+          "model": "hailuo-2.3",
+          "vendor": "MiniMax"
+        },
+        {
+          "section": "video",
+          "model": "hailuo-02-pro",
+          "vendor": "MiniMax"
+        },
+        {
+          "section": "video",
+          "model": "seedance-v1-pro",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "video",
+          "model": "hailuo-02-standard",
+          "vendor": "MiniMax"
+        },
+        {
+          "section": "video",
+          "model": "kandinsky-5.0-t2v-pro",
+          "vendor": "Kandinsky"
+        },
+        {
+          "section": "video",
+          "model": "hunyuan-video-1.5",
+          "vendor": "Tencent"
+        },
+        {
+          "section": "video",
+          "model": "veo-2",
+          "vendor": "Google"
+        },
+        {
+          "section": "video",
+          "model": "kling-v2.1-master",
+          "vendor": "KlingAI"
+        },
+        {
+          "section": "video",
+          "model": "ltx-2-19b",
+          "vendor": "Unknown"
+        },
+        {
+          "section": "video",
+          "model": "wan-v2.2-a14b",
+          "vendor": "Alibaba"
+        },
+        {
+          "section": "video",
+          "model": "kandinsky-5.0-t2v-lite",
+          "vendor": "Kandinsky"
+        },
+        {
+          "section": "video",
+          "model": "seedance-v1-lite",
+          "vendor": "Bytedance"
+        },
+        {
+          "section": "video",
+          "model": "sora",
+          "vendor": "OpenAI"
+        },
+        {
+          "section": "video",
+          "model": "ray2",
+          "vendor": "Luma AI"
+        },
+        {
+          "section": "video",
+          "model": "pika-v2.2",
+          "vendor": "Pika"
+        },
+        {
+          "section": "video",
+          "model": "mochi-v1",
+          "vendor": "Genmo AI"
         }
-      ]
-    },
-    {
-      "date": "2026-08-25T18:53:37.181Z",
-      "additions": 0,
+      ],
       "sources": [
         {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-24T18:54:59.629Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-23T18:44:25.632Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-22T18:45:25.210Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-21T18:51:45.017Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-20T18:55:27.055Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-19T18:49:54.386Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-18T18:52:35.470Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-17T18:53:51.901Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-16T18:43:05.577Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-15T18:44:02.622Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-14T19:08:50.003Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
-        }
-      ]
-    },
-    {
-      "date": "2026-08-13T19:16:08.314Z",
-      "additions": 0,
-      "sources": [
-        {
-          "url": "https://arena.ai/leaderboard/text",
-          "ok": true
-        },
-        {
-          "url": "https://lmarena.ai/leaderboard",
-          "ok": true
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-          "ok": true
-        },
-        {
-          "url": "https://gemini.google/overview/image-generation/",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/text-to-image",
-          "ok": true
-        },
-        {
-          "url": "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-          "ok": true
-        },
-        {
-          "url": "https://arena.ai/leaderboard/video-edit",
-          "ok": true
+          "section": "chat",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text",
+          "fetchedAt": "2026-08-26T02:50:08.801755+00:00",
+          "currentModels": 50,
+          "newModels": 50
+        },
+        {
+          "section": "image",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image",
+          "fetchedAt": "2026-08-26T02:50:08.801755+00:00",
+          "currentModels": 76,
+          "newModels": 76
+        },
+        {
+          "section": "video",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video",
+          "fetchedAt": "2026-08-26T02:50:08.801755+00:00",
+          "currentModels": 45,
+          "newModels": 45
         }
       ]
     }
-  ]
+  ],
+  "sourcePolicy": "Current Arena leaderboard data mirrored daily as structured JSON. No estimated scores, ranks, votes, confidence intervals, win rates, or release dates."
 }
