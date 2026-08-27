@@ -14,8 +14,8 @@ on:
       - "styles.css"
       - "package.json"
   schedule:
-    # Runs daily at 02:10 Asia/Shanghai.
-    - cron: "10 18 * * *"
+    # Runs daily at 12:10 Asia/Shanghai, after the upstream Arena mirror refresh.
+    - cron: "10 4 * * *"
   workflow_dispatch:
 
 permissions:
@@ -47,6 +47,12 @@ jobs:
       - name: Refresh daily snapshot
         run: node scripts/update-snapshot.mjs
 
+      - name: Validate generated snapshot
+        run: |
+          node --check app.js
+          node --check scripts/update-snapshot.mjs
+          node -e "const s=require('./data/snapshot.json'); for (const k of ['chat','image','video']) { const n=s.sections[k].models.filter(m=>m.active).length; if (!n) throw new Error(k+' has no active models'); console.log(k, n); }"
+
       - name: Commit snapshot changes
         run: |
           if [[ -n "$(git status --porcelain data/snapshot.json)" ]]; then
@@ -70,3 +76,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+
