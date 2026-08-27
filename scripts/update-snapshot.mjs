@@ -1,232 +1,175 @@
 import fs from "node:fs/promises";
 
 const snapshotPath = new URL("../data/snapshot.json", import.meta.url);
-const snapshot = JSON.parse(await fs.readFile(snapshotPath, "utf8"));
-const today = new Date().toISOString().slice(0, 10);
+const mirrorRoot = "https://raw.githubusercontent.com/oolong-tea-2026/arena-ai-leaderboards/main/data";
+const now = new Date();
+const today = now.toISOString().slice(0, 10);
 
-const sources = [
-  {
-    section: "chat",
-    url: "https://arena.ai/leaderboard/text",
-    patterns: [
-      { family: "Meta", regex: /\b(?:Llama\s*\d+(?:\.\d+)?(?:\s*(?:Maverick|Scout|Instruct|Chat|405B|70B|8B))?|Muse Spark(?:\s*\d+(?:\.\d+)?)?)\b/gi },
-      { family: "DeepSeek", regex: /\bDeepSeek[-\s]?(?:V|R)\d+(?:\.\d+)?(?:[-\s]?(?:Chat|Reasoner|Thinking|Preview|Instruct))?\b/gi },
-      { family: "Qwen", regex: /\bQwen\d+(?:\.\d+)?(?:[-\s]?(?:Max|Plus|Coder|VL|Omni|Thinking|Instruct|Chat))?\b/gi },
-      { family: "Kimi", regex: /\bKimi[-\s]?(?:K|k)?\d+(?:\.\d+)?(?:[-\s]?(?:Thinking|Turbo|Preview|Instruct))?\b/gi },
-      { family: "MiniMax", regex: /\bMiniMax[-\s]?(?:M|Text|01|abab)?\d+(?:\.\d+)?(?:[-\s]?(?:Preview|Instruct|Chat))?\b/gi },
-    ],
-  },
-  {
-    section: "chat",
-    url: "https://lmarena.ai/leaderboard",
-    patterns: [
-      { family: "Meta", regex: /\b(?:Llama\s*\d+(?:\.\d+)?(?:\s*(?:Maverick|Scout|Instruct|Chat|405B|70B|8B))?|Muse Spark(?:\s*\d+(?:\.\d+)?)?)\b/gi },
-      { family: "DeepSeek", regex: /\bDeepSeek[-\s]?(?:V|R)\d+(?:\.\d+)?(?:[-\s]?(?:Chat|Reasoner|Thinking|Preview|Instruct))?\b/gi },
-      { family: "Qwen", regex: /\bQwen\d+(?:\.\d+)?(?:[-\s]?(?:Max|Plus|Coder|VL|Omni|Thinking|Instruct|Chat))?\b/gi },
-      { family: "Kimi", regex: /\bKimi[-\s]?(?:K|k)?\d+(?:\.\d+)?(?:[-\s]?(?:Thinking|Turbo|Preview|Instruct))?\b/gi },
-      { family: "MiniMax", regex: /\bMiniMax[-\s]?(?:M|Text|01|abab)?\d+(?:\.\d+)?(?:[-\s]?(?:Preview|Instruct|Chat))?\b/gi },
-    ],
-  },
-  {
-    section: "image",
-    url: "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
-    patterns: [{ family: "Google Nano Banana", regex: /\bNano Banana\s*(?:Pro|[0-9]+(?:\.[0-9]+)?)?/gi }],
-  },
-  {
-    section: "image",
-    url: "https://gemini.google/overview/image-generation/",
-    patterns: [{ family: "Google Nano Banana", regex: /\bNano Banana\s*(?:Pro|[0-9]+(?:\.[0-9]+)?)?/gi }],
-  },
-  {
-    section: "image",
-    url: "https://arena.ai/leaderboard/text-to-image",
-    patterns: [
-      { family: "Google Nano Banana", regex: /\bNano Banana\s*(?:Pro|[0-9]+(?:\.[0-9]+)?)?/gi },
-      { family: "Google", regex: /\bGemini\s*[0-9.]+\s*(?:Flash|Pro)?\s*Image\b/gi },
-    ],
-  },
-  {
-    section: "video",
-    url: "https://artificialanalysis.ai/embed/text-to-video-leaderboard/leaderboard/text-to-video",
-    patterns: [
-      { family: "Wan", regex: /\bWan\s*[0-9]+(?:\.[0-9]+)?\b/gi },
-      { family: "Pika Labs", regex: /\bPika\s*[0-9]+(?:\.[0-9]+)?\b/gi },
-    ],
-  },
-  {
-    section: "video",
-    url: "https://arena.ai/leaderboard/video-edit",
-    patterns: [
-      { family: "Wan", regex: /\bWan\s*[0-9]+(?:\.[0-9]+)?\b/gi },
-      { family: "Pika Labs", regex: /\bPika\s*[0-9]+(?:\.[0-9]+)?\b/gi },
-    ],
-  },
-];
+const boards = {
+  chat: { leaderboard: "text", label: "CHAT", unit: "Arena score", minimum: 20 },
+  image: { leaderboard: "text-to-image", label: "IMAGE", unit: "Image Arena score", minimum: 20 },
+  video: { leaderboard: "text-to-video", label: "VIDEO", unit: "Video Arena score", minimum: 10 },
+};
 
-let additions = 0;
-const sourceReports = [];
-const addedFamilies = new Set();
+const previous = await readPreviousSnapshot();
+const latest = await fetchJson(`${mirrorRoot}/latest.json?cache=${Date.now()}`);
+validateLatestPointer(latest);
 
-for (const source of sources) {
-  try {
-    const html = await fetchText(source.url);
-    const text = htmlToText(html);
-    const publishedDate = extractPublishedDate(html) || today;
-    for (const pattern of source.patterns) {
-      for (const match of text.matchAll(pattern.regex)) {
-        const name = canonicalName(pattern.family, match[0]);
-        const familyKey = `${source.section}:${pattern.family}`;
-        if (addedFamilies.has(familyKey)) continue;
-        if (!isCleanCandidate(source.section, pattern.family, name)) continue;
-        if (!isNewerThanFamilyMainline(source.section, pattern.family, name)) continue;
-        if (alreadyExists(source.section, pattern.family, name)) continue;
-        addDiscoveredModel(source.section, pattern.family, name, publishedDate, source.url);
-        addedFamilies.add(familyKey);
-        additions += 1;
-      }
-    }
-    sourceReports.push({ url: source.url, ok: true });
-  } catch (error) {
-    sourceReports.push({ url: source.url, ok: false, error: String(error.message || error) });
-  }
+const snapshot = previous?.schemaVersion === 2 ? previous : createEmptySnapshot();
+const reports = [];
+const allNewModels = [];
+
+for (const [sectionKey, config] of Object.entries(boards)) {
+  const payload = await fetchJson(`${mirrorRoot}/${latest.path}/${config.leaderboard}.json?cache=${Date.now()}`);
+  validateLeaderboard(payload, config);
+
+  const oldModels = new Map((snapshot.sections[sectionKey]?.models || []).map((model) => [model.id, model]));
+  const seenIds = new Set();
+  const activeModels = payload.models.map((row) => {
+    const id = `${config.leaderboard}:${slug(row.model)}`;
+    const old = oldModels.get(id);
+    seenIds.add(id);
+    if (!old) allNewModels.push({ section: sectionKey, model: row.model, vendor: row.vendor || "Unknown" });
+    return {
+      id,
+      family: normalizeVendor(row.vendor, row.model),
+      name: row.model,
+      date: old?.firstSeen || latest.date,
+      firstSeen: old?.firstSeen || latest.date,
+      lastSeen: latest.date,
+      active: true,
+      score: numberOrNull(row.score),
+      rank: numberOrNull(row.rank),
+      votes: numberOrNull(row.votes),
+      ci: numberOrNull(row.ci),
+      license: row.license || null,
+      leaderboard: config.leaderboard,
+      source: payload.meta.source_url,
+    };
+  });
+
+  const inactiveModels = [...oldModels.values()]
+    .filter((model) => !seenIds.has(model.id))
+    .map((model) => ({ ...model, active: false }));
+
+  snapshot.sections[sectionKey] = {
+    label: config.label,
+    unit: config.unit,
+    note: `${payload.meta.source_url} · fetched ${payload.meta.fetched_at}`,
+    leaderboard: config.leaderboard,
+    sourceUrl: payload.meta.source_url,
+    sourceFetchedAt: payload.meta.fetched_at,
+    sourceLastUpdated: payload.meta.last_updated || null,
+    currentCount: activeModels.length,
+    models: [...activeModels, ...inactiveModels].sort(sortModels),
+  };
+
+  reports.push({
+    section: sectionKey,
+    leaderboard: config.leaderboard,
+    source: payload.meta.source_url,
+    fetchedAt: payload.meta.fetched_at,
+    currentModels: activeModels.length,
+    newModels: activeModels.filter((model) => !oldModels.has(model.id)).length,
+  });
 }
 
-snapshot.generatedAt = new Date().toISOString();
+snapshot.generatedAt = now.toISOString();
+snapshot.dataAsOf = latest.date;
+snapshot.schemaVersion = 2;
+snapshot.sourcePolicy = "Current Arena leaderboard data mirrored daily as structured JSON. No estimated scores, ranks, votes, confidence intervals, win rates, or release dates.";
 snapshot.updateHistory ||= [];
 snapshot.updateHistory.unshift({
   date: snapshot.generatedAt,
-  additions,
-  sources: sourceReports,
+  dataAsOf: latest.date,
+  additions: allNewModels.length,
+  newModels: allNewModels,
+  sources: reports,
 });
-snapshot.updateHistory = snapshot.updateHistory.slice(0, 14);
+snapshot.updateHistory = snapshot.updateHistory.slice(0, 30);
 
 await fs.writeFile(snapshotPath, `${JSON.stringify(snapshot, null, 2)}\n`);
-console.log(`snapshot updated: ${additions} additions`);
+console.log(`snapshot updated: data ${latest.date}, ${allNewModels.length} new models`);
+for (const report of reports) console.log(`${report.section}: ${report.currentModels} current, ${report.newModels} new`);
 
-async function fetchText(url) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 18000);
+async function readPreviousSnapshot() {
   try {
-    const response = await fetch(url, {
-      headers: {
-        "user-agent": "ai-model-evolution-arena/1.0 (+https://github.com/)",
-        accept: "text/html,application/json;q=0.9,*/*;q=0.8",
-      },
-      signal: controller.signal,
-    });
-    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-    return await response.text();
-  } finally {
-    clearTimeout(timeout);
+    return JSON.parse(await fs.readFile(snapshotPath, "utf8"));
+  } catch {
+    return null;
   }
 }
 
-function htmlToText(html) {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;|&#160;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/\s+/g, " ")
-    .trim();
+function createEmptySnapshot() {
+  return {
+    schemaVersion: 2,
+    generatedAt: null,
+    dataAsOf: null,
+    sections: { chat: { models: [] }, image: { models: [] }, video: { models: [] } },
+    updateHistory: [],
+  };
 }
 
-function extractPublishedDate(html) {
-  const iso =
-    html.match(/(?:datePublished|article:published_time|pubdate)["':=\s]+([0-9]{4}-[0-9]{2}-[0-9]{2})/i)?.[1] ||
-    html.match(/\b(20[0-9]{2}-[01][0-9]-[0-3][0-9])\b/)?.[1];
-  if (iso) return iso;
-  const month = html.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+([0-3]?[0-9]),\s+(20[0-9]{2})\b/i);
-  if (!month) return "";
-  const monthIndex = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"].indexOf(month[1].slice(0, 3).toLowerCase());
-  return `${month[3]}-${String(monthIndex + 1).padStart(2, "0")}-${String(Number(month[2])).padStart(2, "0")}`;
-}
-
-function canonicalName(family, raw) {
-  const cleaned = raw.replace(/\s+/g, " ").replace(/[|:;,]+$/g, "").trim();
-  if (!cleaned) return "";
-  if (family === "Google Nano Banana") {
-    if (/pro/i.test(cleaned)) return "Nano Banana Pro";
-    const version = cleaned.match(/[0-9]+(?:\.[0-9]+)?/)?.[0];
-    return version ? `Nano Banana ${version}` : "Nano Banana 1";
+async function fetchJson(url, attempts = 3) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 25000);
+    try {
+      const response = await fetch(url, {
+        headers: { accept: "application/json", "user-agent": "ai-model-evolution-arena/2.0", "cache-control": "no-cache" },
+        signal: controller.signal,
+      });
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      return await response.json();
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, attempt * 1500));
+    } finally {
+      clearTimeout(timeout);
+    }
   }
-  if (family === "Pika Labs") return cleaned.replace(/^Pika\b/i, "Pika");
-  if (family === "Wan") return cleaned.replace(/^Wan\b/i, "Wan");
-  if (family === "Qwen") return cleaned.replace(/^qwen/i, "Qwen").replace(/[-\s]max$/i, " Max");
-  if (family === "Kimi") return cleaned.replace(/^kimi/i, "Kimi").replace(/[-\s]preview$/i, " Preview");
-  if (family === "DeepSeek") return cleaned.replace(/^deepseek/i, "DeepSeek");
-  if (family === "MiniMax") return cleaned.replace(/^minimax/i, "MiniMax");
-  return cleaned;
+  throw new Error(`Unable to fetch ${url}: ${lastError?.message || lastError}`);
 }
 
-function alreadyExists(section, family, name) {
-  return snapshot.sections[section].models.some(
-    (model) => model.family.toLowerCase() === family.toLowerCase() && model.name.toLowerCase() === name.toLowerCase(),
-  );
+function validateLatestPointer(latest) {
+  if (!/^20\d{2}-\d{2}-\d{2}$/.test(latest?.date || "") || latest.path !== latest.date) throw new Error("Invalid latest.json pointer");
+  const ageMs = now - new Date(`${latest.date}T23:59:59Z`);
+  if (ageMs > 3 * 86400000) throw new Error(`Upstream snapshot is stale: latest is ${latest.date}, today is ${today}`);
 }
 
-function isCleanCandidate(section, family, name) {
-  if (!name || name.length > 42) return false;
-  const allowedBrands = {
-    Meta: ["llama", "muse spark"],
-    DeepSeek: ["deepseek"],
-    Qwen: ["qwen"],
-    Kimi: ["kimi"],
-    MiniMax: ["minimax"],
-  }[family] || [];
-  const lowered = allowedBrands.reduce((value, brand) => value.replaceAll(brand, ""), name.toLowerCase());
-  if (/\b(?:gpt|claude|gemini|grok|llama|qwen|deepseek|minimax|kimi|sora|veo|runway|kling)\b/i.test(lowered)) {
-    return false;
+function validateLeaderboard(payload, config) {
+  if (payload?.meta?.leaderboard !== config.leaderboard) throw new Error(`Wrong leaderboard: expected ${config.leaderboard}`);
+  if (!Array.isArray(payload.models) || payload.models.length < config.minimum) {
+    throw new Error(`${config.leaderboard} returned only ${payload.models?.length || 0} models`);
   }
-  if (section === "image" && family === "Google Nano Banana") return /^Nano Banana(?: Pro| \d+(?:\.\d+)?)$/i.test(name);
-  if (section === "video" && family === "Wan") return /^Wan \d+(?:\.\d+)?$/i.test(name);
-  if (section === "video" && family === "Pika Labs") return /^Pika \d+(?:\.\d+)?$/i.test(name);
-  if (!hasReasonableVersion(family, name)) return false;
-  return /\d/.test(name) || /Muse Spark/i.test(name);
+  const bad = payload.models.find((row) => !row.model || !Number.isFinite(Number(row.rank)) || !Number.isFinite(Number(row.score)));
+  if (bad) throw new Error(`${config.leaderboard} contains an invalid model row`);
+  const fetchedAge = now - new Date(payload.meta.fetched_at);
+  if (!Number.isFinite(fetchedAge) || fetchedAge > 3 * 86400000) throw new Error(`${config.leaderboard} source fetch is stale: ${payload.meta.fetched_at}`);
 }
 
-function hasReasonableVersion(family, name) {
-  if (/Muse Spark/i.test(name)) return true;
-  const version = versionNumber(name);
-  if (version === 0) return false;
-  if (family === "Meta" && /llama/i.test(name)) return version >= 2 && version <= 10;
-  if (["DeepSeek", "Qwen", "Kimi", "MiniMax", "Wan", "Pika Labs", "Google Nano Banana"].includes(family)) {
-    return version > 0 && version <= 10;
-  }
-  return version > 0 && version <= 20;
+function normalizeVendor(vendor, modelName) {
+  const aliases = { SpaceXAI: "xAI", Bytedance: "ByteDance", Alibaba: "Qwen / Alibaba", Moonshot: "Kimi / Moonshot", Pika: "Pika Labs" };
+  if (vendor) return aliases[vendor] || vendor;
+  const name = String(modelName).toLowerCase();
+  if (name.includes("stable-diffusion")) return "Stability AI";
+  if (name.includes("pika")) return "Pika Labs";
+  return "Unknown";
 }
 
-function isNewerThanFamilyMainline(section, family, name) {
-  const currentVersions = snapshot.sections[section].models
-    .filter((model) => model.family === family)
-    .map((model) => versionNumber(model.name))
-    .filter((version) => version > 0);
-  const candidateVersion = versionNumber(name);
-  if (candidateVersion === 0) return !alreadyExists(section, family, name);
-  return candidateVersion > Math.max(0, ...currentVersions);
+function slug(value) {
+  return String(value).trim().toLowerCase().replace(/\s+/g, "-");
 }
 
-function versionNumber(name) {
-  const version = name.match(/\d+(?:\.\d+)?/)?.[0];
-  return version ? Number(version) : 0;
+function numberOrNull(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
 }
 
-function addDiscoveredModel(section, family, name, date, url) {
-  const models = snapshot.sections[section].models;
-  const familyModels = models.filter((model) => model.family === family).sort((a, b) => a.date.localeCompare(b.date));
-  const latestFamily = familyModels.at(-1);
-  const latestSection = [...models].sort((a, b) => b.score - a.score)[0];
-  const score = latestFamily ? latestFamily.score + 12 : latestSection.score - 35;
-  const rank = Math.max(1, latestFamily ? latestFamily.rank - 1 : latestSection.rank + 1);
-  const winRate = Math.min(0.92, Number(((latestFamily?.winRate ?? 0.72) + 0.01).toFixed(2)));
-  models.push({
-    family,
-    name,
-    date,
-    score,
-    rank,
-    winRate,
-    source: `Auto-discovered from ${new URL(url).hostname}`,
-  });
+function sortModels(a, b) {
+  if (a.active !== b.active) return a.active ? -1 : 1;
+  return (a.rank ?? Number.MAX_SAFE_INTEGER) - (b.rank ?? Number.MAX_SAFE_INTEGER) || a.name.localeCompare(b.name);
 }
+
+
