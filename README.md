@@ -1,6 +1,7 @@
 # AI Model Evolution Arena
 
 一个适合发布到 GitHub Pages 的静态网页项目，用时间线、评分曲线、排名表和二维胜率热力图展示主流 AI 模型的发展过程。
+演示地址  https://jeffreylexxx.github.io/ai-chat-image-video-arena-ai/
 
 页面分为三个板块：
 
