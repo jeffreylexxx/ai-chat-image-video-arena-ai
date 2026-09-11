@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-10T08:54:12.519Z",
+  "generatedAt": "2026-09-11T08:51:51.461Z",
   "dataAsOf": "2026-09-10",
   "sections": {
     "chat": {
@@ -2905,6 +2905,38 @@
     }
   },
   "updateHistory": [
+    {
+      "date": "2026-09-11T08:51:51.461Z",
+      "dataAsOf": "2026-09-10",
+      "additions": 0,
+      "newModels": [],
+      "sources": [
+        {
+          "section": "chat",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text",
+          "fetchedAt": "2026-09-10T06:36:45.365321+00:00",
+          "currentModels": 20,
+          "newModels": 0
+        },
+        {
+          "section": "image",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image",
+          "fetchedAt": "2026-09-10T06:36:45.365321+00:00",
+          "currentModels": 78,
+          "newModels": 0
+        },
+        {
+          "section": "video",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video",
+          "fetchedAt": "2026-09-10T06:36:45.365321+00:00",
+          "currentModels": 48,
+          "newModels": 0
+        }
+      ]
+    },
     {
       "date": "2026-09-10T08:54:12.519Z",
       "dataAsOf": "2026-09-10",
