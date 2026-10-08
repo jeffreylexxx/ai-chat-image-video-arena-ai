@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-07T10:59:46.008Z",
+  "generatedAt": "2026-10-08T11:17:15.237Z",
   "dataAsOf": "2026-10-07",
   "sections": {
     "chat": {
@@ -3146,6 +3146,38 @@
   },
   "updateHistory": [
     {
+      "date": "2026-10-08T11:17:15.237Z",
+      "dataAsOf": "2026-10-07",
+      "additions": 0,
+      "newModels": [],
+      "sources": [
+        {
+          "section": "chat",
+          "leaderboard": "text",
+          "source": "https://arena.ai/leaderboard/text",
+          "fetchedAt": "2026-10-07T07:41:15.251590+00:00",
+          "currentModels": 20,
+          "newModels": 0
+        },
+        {
+          "section": "image",
+          "leaderboard": "text-to-image",
+          "source": "https://arena.ai/leaderboard/text-to-image",
+          "fetchedAt": "2026-10-07T07:41:15.251590+00:00",
+          "currentModels": 20,
+          "newModels": 0
+        },
+        {
+          "section": "video",
+          "leaderboard": "text-to-video",
+          "source": "https://arena.ai/leaderboard/text-to-video",
+          "fetchedAt": "2026-10-07T07:41:15.251590+00:00",
+          "currentModels": 48,
+          "newModels": 0
+        }
+      ]
+    },
+    {
       "date": "2026-10-07T10:59:46.008Z",
       "dataAsOf": "2026-10-07",
       "additions": 1,
@@ -4182,54 +4214,6 @@
           "fetchedAt": "2026-09-03T06:27:16.506342+00:00",
           "currentModels": 46,
           "newModels": 0
-        }
-      ]
-    },
-    {
-      "date": "2026-09-03T08:52:35.492Z",
-      "dataAsOf": "2026-09-03",
-      "additions": 3,
-      "newModels": [
-        {
-          "section": "chat",
-          "model": "claude-fable-5.1-max",
-          "vendor": "Anthropic"
-        },
-        {
-          "section": "chat",
-          "model": "gemini-3.8-flash-high",
-          "vendor": "Google"
-        },
-        {
-          "section": "video",
-          "model": "gemini-omni-1.1-flash",
-          "vendor": "Google"
-        }
-      ],
-      "sources": [
-        {
-          "section": "chat",
-          "leaderboard": "text",
-          "source": "https://arena.ai/leaderboard/text",
-          "fetchedAt": "2026-09-03T06:27:16.506342+00:00",
-          "currentModels": 20,
-          "newModels": 2
-        },
-        {
-          "section": "image",
-          "leaderboard": "text-to-image",
-          "source": "https://arena.ai/leaderboard/text-to-image",
-          "fetchedAt": "2026-09-03T06:27:16.506342+00:00",
-          "currentModels": 76,
-          "newModels": 0
-        },
-        {
-          "section": "video",
-          "leaderboard": "text-to-video",
-          "source": "https://arena.ai/leaderboard/text-to-video",
-          "fetchedAt": "2026-09-03T06:27:16.506342+00:00",
-          "currentModels": 46,
-          "newModels": 1
         }
       ]
     }
